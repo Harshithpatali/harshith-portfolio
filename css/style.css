@@ -45,3 +45,46 @@ footer{
     padding:20px;
     color:#8fa7be;
 }
+.research-card{
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  padding:2rem;
+
+}
+
+.research-text{
+
+  color:var(--muted);
+
+  line-height:1.8;
+
+  margin-bottom:2rem;
+
+}
+
+.research-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+  gap:1rem;
+
+  margin-bottom:2rem;
+
+}
+
+.research-item{
+
+  padding:1rem;
+
+  background:rgba(0,229,255,0.05);
+
+  border:1px solid rgba(0,229,255,0.15);
+
+  color:var(--accent);
+
+}
