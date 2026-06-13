@@ -823,7 +823,7 @@ footer{
     </div>
     <div class="hero-stats-card">
       <div class="hero-stat">
-        <div class="hero-stat-num">14<sup>+</sup></div>
+        <div class="hero-stat-num">15<sup>+</sup></div>
         <div class="hero-stat-label">AI Projects</div>
       </div>
       <div class="hero-stat">
@@ -1194,6 +1194,55 @@ iv>
     </div>
   </div>
 </div>
+
+
+<div class="project-card" data-category="tools" onclick="openProject('vcpg')">
+
+    <div class="project-header">
+        <span class="project-num">09</span>
+        <span class="project-category">AI Developer Platform</span>
+    </div>
+
+    <div class="project-title">
+        VCPG - Vibe Coding Prompt Generator
+    </div>
+
+    <p class="project-desc">
+        Production-ready multi-agent AI platform that transforms software ideas into professional development blueprints, architecture plans, implementation roadmaps, deployment strategies, and detailed coding prompts using OpenRouter and Groq.
+    </p>
+
+    <div class="project-metrics">
+        <span class="metric">FastAPI</span>
+        <span class="metric">Streamlit</span>
+        <span class="metric">OpenRouter</span>
+        <span class="metric">Groq</span>
+        <span class="metric">Multi-Agent AI</span>
+    </div>
+
+    <div class="chart-box">
+        <canvas id="chart9"></canvas>
+    </div>
+
+    <div class="project-links" onclick="event.stopPropagation()">
+
+        <a
+            href="https://github.com/Harshithpatali/VCPG"
+            target="_blank"
+            class="project-link">
+            GitHub
+        </a>
+
+        <a
+            href="https://vcpgv1.streamlit.app/dashboard"
+            target="_blank"
+            class="project-link live">
+            Live Demo ↗
+        </a>
+
+    </div>
+
+</div>
+
 
 <!-- ── EDUCATION ──────────────────────────────────────── -->
 
@@ -1787,7 +1836,43 @@ const projects={
     tech:['OpenAI API','LangChain','Python','Streamlit','GitHub API'],
     github:'https://github.com/Harshithpatali',
     live:'https://ai-readme-generator-wkz9wlcv4xkv9cdg9fpzeg.streamlit.app/'
-  }
+  },
+  vcpg: {
+
+    category: "AI Developer Platform",
+
+    title: "VCPG - Vibe Coding Prompt Generator",
+
+    description:
+        "A production-grade multi-agent AI application that converts software ideas into complete development roadmaps, architecture plans, folder structures, deployment guides, and implementation prompts. The platform leverages OpenRouter for blueprint generation and Groq for prompt refinement.",
+
+    technologies: [
+        "Python",
+        "FastAPI",
+        "Streamlit",
+        "OpenRouter",
+        "Groq",
+        "Pydantic",
+        "HTTPX",
+        "Render",
+        "Streamlit Cloud",
+        "GitHub"
+    ],
+
+    highlights: [
+        "Multi-Agent AI Architecture",
+        "Prompt Engineering Platform",
+        "FastAPI REST Backend",
+        "Streamlit SaaS Interface",
+        "Cloud Deployment Pipeline",
+        "Production-Ready Folder Structure"
+    ],
+
+    github: "https://github.com/Harshithpatali/VCPG",
+
+    live: "https://vcpgv1.streamlit.app/dashboard"
+},
+  
 };
 
 /* ── MODAL ───────────────────────────────────────────── */
