@@ -1063,10 +1063,16 @@ footer{
 </div>
 
 <!-- ── PROJECTS ───────────────────────────────────────── -->
+<!-- ── PROJECTS ───────────────────────────────────────── -->
 <div id="projects">
   <div class="section">
+
     <p class="section-label fade-up">Selected Work</p>
-    <h2 class="section-title fade-up">AI Systems <em>Portfolio.</em></h2>
+
+    <h2 class="section-title fade-up">
+      AI Systems <em>Portfolio.</em>
+    </h2>
+
     <div class="projects-filter fade-up">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="finance">Finance AI</button>
@@ -1074,257 +1080,638 @@ footer{
       <button class="filter-btn" data-filter="analytics">Analytics</button>
       <button class="filter-btn" data-filter="tools">Dev Tools</button>
     </div>
+
     <div class="projects-grid stagger">
 
-
-      <div class="project-card" data-category="analytics" onclick="openProject('retail_demand_inventory')">
-  <div class="project-header">
-    <span class="project-num">01</span>
-    <span class="project-category">Forecasting &amp; Optimization</span>
-  </div>
-
-  <div class="project-title">
-    Retail Demand &amp; Inventory Optimization
-  </div>
-
-  <p class="project-desc">
-    End-to-end retail forecasting and inventory decision system combining
-    machine learning, demand uncertainty, periodic-review optimization,
-    simulation, and business-impact analysis.
-  </p>
-
-  <div class="project-metrics">
-    <span class="metric">XGBoost</span>
-    <span class="metric">Time Series</span>
-    <span class="metric">(R,S) Policy</span>
-  </div>
-
-  <div class="chart-box">
-    <canvas id="chart11"></canvas>
-  </div>
-
-  <div class="project-links" onclick="event.stopPropagation()">
-    <a
-      href="https://github.com/Harshithpatali/retail-demand-inventory-optimization"
-      target="_blank"
-      class="project-link">
-      GitHub
-    </a>
-
-    <a
-      href="https://retail-demand-inventory-optimization-v1.streamlit.app/"
-      target="_blank"
-      class="project-link live">
-      Live Demo ↗
-    </a>
-  </div>
-</div>
-      
-
-      <div class="project-card" data-category="finance" onclick="openProject('qqq_transformer')">
+      <!-- =====================================================
+           PROJECT 01 — RETAIL DEMAND & INVENTORY
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="analytics"
+        onclick="openProject('retail_demand_inventory')"
+      >
         <div class="project-header">
           <span class="project-num">01</span>
-          <span class="project-category">Quant AI</span>
+          <span class="project-category">
+            Forecasting &amp; Optimization
+          </span>
         </div>
-        <div class="project-title">QQQ Transformer Forecasting</div>
-        <p class="project-desc">Production-grade Transformer forecasting system for NASDAQ-100 prediction and intelligent AI trading signals.</p>
+
+        <div class="project-title">
+          Retail Demand &amp; Inventory Optimization
+        </div>
+
+        <p class="project-desc">
+          End-to-end retail forecasting and inventory decision system
+          combining machine learning, demand uncertainty, periodic-review
+          optimization, simulation, and business-impact analysis.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">Transformers</span><span class="metric">Quant AI</span><span class="metric">FastAPI</span>
+          <span class="metric">XGBoost</span>
+          <span class="metric">Time Series</span>
+          <span class="metric">(R,S) Policy</span>
         </div>
-        <div class="chart-box"><canvas id="chart1"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://qqq-transformer-forecasting-mjfjpzw3p2bk3nq8lfadg7.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart11"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali/retail-demand-inventory-optimization"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://retail-demand-inventory-optimization-v1.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="nlp" onclick="openProject('multi_llm')">
+
+      <!-- =====================================================
+           PROJECT 02 — QQQ TRANSFORMER
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="finance"
+        onclick="openProject('qqq_transformer')"
+      >
         <div class="project-header">
           <span class="project-num">02</span>
-          <span class="project-category">LLMOps</span>
+          <span class="project-category">Quant AI</span>
         </div>
-        <div class="project-title">Multi-LLM AI Platform</div>
-        <p class="project-desc">AI orchestration platform using multiple LLMs, AI Judge systems, and knowledge synthesis pipelines.</p>
+
+        <div class="project-title">
+          QQQ Transformer Forecasting
+        </div>
+
+        <p class="project-desc">
+          Production-grade Transformer forecasting system for NASDAQ-100
+          prediction and intelligent AI trading signals.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">LLMOps</span><span class="metric">RAG</span><span class="metric">Generative AI</span>
+          <span class="metric">Transformers</span>
+          <span class="metric">Quant AI</span>
+          <span class="metric">FastAPI</span>
         </div>
-        <div class="chart-box"><canvas id="chart2"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://multi-llm-ai-platform-cf4zxquxedber9fn3hnnxz.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart1"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://qqq-transformer-forecasting-mjfjpzw3p2bk3nq8lfadg7.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="tools" onclick="openProject('llm_reliability')">
+
+      <!-- =====================================================
+           PROJECT 03 — MULTI-LLM
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="nlp"
+        onclick="openProject('multi_llm')"
+      >
         <div class="project-header">
           <span class="project-num">03</span>
-          <span class="project-category">AI Infrastructure</span>
+          <span class="project-category">LLMOps</span>
         </div>
-        <div class="project-title">LLM Reliability Platform</div>
-        <p class="project-desc">Distributed AI reliability engineering system with telemetry pipelines, drift detection, and observability dashboards.</p>
+
+        <div class="project-title">
+          Multi-LLM AI Platform
+        </div>
+
+        <p class="project-desc">
+          AI orchestration platform using multiple LLMs, AI Judge systems,
+          and knowledge synthesis pipelines.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">Distributed Systems</span><span class="metric">Telemetry</span><span class="metric">MLOps</span>
+          <span class="metric">LLMOps</span>
+          <span class="metric">RAG</span>
+          <span class="metric">Generative AI</span>
         </div>
-        <div class="chart-box"><canvas id="chart3"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://llm-evaluation-platform-q.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart2"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://multi-llm-ai-platform-cf4zxquxedber9fn3hnnxz.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="nlp" onclick="openProject('netflix_transformer')">
+
+      <!-- =====================================================
+           PROJECT 04 — LLM RELIABILITY
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="tools"
+        onclick="openProject('llm_reliability')"
+      >
         <div class="project-header">
           <span class="project-num">04</span>
-          <span class="project-category">Recommendation AI</span>
+          <span class="project-category">
+            AI Infrastructure
+          </span>
         </div>
-        <div class="project-title">Netflix Transformer Recommender</div>
-        <p class="project-desc">Sequential recommendation system using Transformers, attention mechanisms, and ranking optimization.</p>
+
+        <div class="project-title">
+          LLM Reliability Platform
+        </div>
+
+        <p class="project-desc">
+          Distributed AI reliability engineering system with telemetry
+          pipelines, drift detection, and observability dashboards.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">Recommendation AI</span><span class="metric">Attention</span><span class="metric">Ranking</span>
+          <span class="metric">Distributed Systems</span>
+          <span class="metric">Telemetry</span>
+          <span class="metric">MLOps</span>
         </div>
-        <div class="chart-box"><canvas id="chart4"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://netflix-transformer-recommender-rsjgta5q2bvzgaqfappzvwf.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart3"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://llm-evaluation-platform-q.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="analytics" onclick="openProject('analytics_platform')">
+
+      <!-- =====================================================
+           PROJECT 05 — NETFLIX TRANSFORMER
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="nlp"
+        onclick="openProject('netflix_transformer')"
+      >
         <div class="project-header">
           <span class="project-num">05</span>
-          <span class="project-category">AutoML SaaS</span>
+          <span class="project-category">
+            Recommendation AI
+          </span>
         </div>
-        <div class="project-title">AI Analytics Platform</div>
-        <p class="project-desc">Cloud-native AutoML and analytics platform with explainable AI, dashboards, and ML automation.</p>
+
+        <div class="project-title">
+          Netflix Transformer Recommender
+        </div>
+
+        <p class="project-desc">
+          Sequential recommendation system using Transformers,
+          attention mechanisms, and ranking optimization.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">AutoML</span><span class="metric">Explainable AI</span><span class="metric">Cloud AI</span>
+          <span class="metric">Recommendation AI</span>
+          <span class="metric">Attention</span>
+          <span class="metric">Ranking</span>
         </div>
-        <div class="chart-box"><canvas id="chart5"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://ai-analytics-platform-kreefks4zqxbykugnzbob6.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart4"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://netflix-transformer-recommender-rsjgta5q2bvzgaqfappzvwf.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="nlp" onclick="openProject('hiresense_ai')">
+
+      <!-- =====================================================
+           PROJECT 06 — AI ANALYTICS
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="analytics"
+        onclick="openProject('analytics_platform')"
+      >
         <div class="project-header">
           <span class="project-num">06</span>
-          <span class="project-category">NLP Intelligence</span>
+          <span class="project-category">AutoML SaaS</span>
         </div>
-        <div class="project-title">HireSense AI</div>
-        <p class="project-desc">AI recruiter intelligence system using semantic search, transformer embeddings, and talent analytics.</p>
+
+        <div class="project-title">
+          AI Analytics Platform
+        </div>
+
+        <p class="project-desc">
+          Cloud-native AutoML and analytics platform with explainable AI,
+          dashboards, and ML automation.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">NLP</span><span class="metric">Semantic Search</span><span class="metric">Embeddings</span>
+          <span class="metric">AutoML</span>
+          <span class="metric">Explainable AI</span>
+          <span class="metric">Cloud AI</span>
         </div>
-        <div class="chart-box"><canvas id="chart6"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://hiresenseai-rye9enspyqy8fpmfaumvpw.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart5"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://ai-analytics-platform-kreefks4zqxbykugnzbob6.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="analytics" onclick="openProject('churn')">
+
+      <!-- =====================================================
+           PROJECT 07 — HIRESENSE
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="nlp"
+        onclick="openProject('hiresense_ai')"
+      >
         <div class="project-header">
           <span class="project-num">07</span>
-          <span class="project-category">Predictive Analytics</span>
+          <span class="project-category">
+            NLP Intelligence
+          </span>
         </div>
-        <div class="project-title">Customer Churn Prediction</div>
-        <p class="project-desc">Predictive ML platform identifying customer churn risk using behavioral analytics and gradient boosted classification models.</p>
+
+        <div class="project-title">
+          HireSense AI
+        </div>
+
+        <p class="project-desc">
+          AI recruiter intelligence system using semantic search,
+          transformer embeddings, and talent analytics.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">XGBoost</span><span class="metric">Classification</span><span class="metric">Business AI</span>
+          <span class="metric">NLP</span>
+          <span class="metric">Semantic Search</span>
+          <span class="metric">Embeddings</span>
         </div>
-        <div class="chart-box"><canvas id="chart7"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali/customer_churn_pipeline" target="_blank" class="project-link">GitHub</a>
-          <a href="https://customer-churn-prediction-system-eoz2hnc3sacvv2qz8asotz.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart6"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://hiresenseai-rye9enspyqy8fpmfaumvpw.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="tools" onclick="openProject('readme_gen')">
+
+      <!-- =====================================================
+           PROJECT 08 — CUSTOMER CHURN
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="analytics"
+        onclick="openProject('churn')"
+      >
         <div class="project-header">
           <span class="project-num">08</span>
-          <span class="project-category">Developer Tools</span>
+          <span class="project-category">
+            Predictive Analytics
+          </span>
         </div>
-        <div class="project-title">AI README Generator</div>
-        <p class="project-desc">LLM-powered tool generating professional GitHub README files using prompt engineering and intelligent repository analysis.</p>
+
+        <div class="project-title">
+          Customer Churn Prediction
+        </div>
+
+        <p class="project-desc">
+          Predictive ML platform identifying customer churn risk using
+          behavioral analytics and gradient boosted classification models.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">LLMs</span><span class="metric">Dev Tools</span><span class="metric">Prompt Engineering</span>
+          <span class="metric">XGBoost</span>
+          <span class="metric">Classification</span>
+          <span class="metric">Business AI</span>
         </div>
-        <div class="chart-box"><canvas id="chart8"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali" target="_blank" class="project-link">GitHub</a>
-          <a href="https://ai-readme-generator-wkz9wlcv4xkv9cdg9fpzeg.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart7"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali/customer_churn_pipeline"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://customer-churn-prediction-system-eoz2hnc3sacvv2qz8asotz.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
-      <div class="project-card" data-category="tools" onclick="openProject('vcpg')">
 
-    <div class="project-header">
-        <span class="project-num">09</span>
-        <span class="project-category">AI Developer Platform</span>
-    </div>
+      <!-- =====================================================
+           PROJECT 09 — README GENERATOR
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="tools"
+        onclick="openProject('readme_gen')"
+      >
+        <div class="project-header">
+          <span class="project-num">09</span>
+          <span class="project-category">
+            Developer Tools
+          </span>
+        </div>
 
-    <div class="project-title">
-        VCPG - Vibe Coding Prompt Generator
-    </div>
+        <div class="project-title">
+          AI README Generator
+        </div>
 
-    <p class="project-desc">
-        Production-ready multi-agent AI platform that transforms software ideas into professional development blueprints, architecture plans, implementation roadmaps, deployment strategies, and detailed coding prompts using OpenRouter and Groq.
-    </p>
+        <p class="project-desc">
+          LLM-powered tool generating professional GitHub README files
+          using prompt engineering and intelligent repository analysis.
+        </p>
 
-    <div class="project-metrics">
-        <span class="metric">FastAPI</span>
-        <span class="metric">Streamlit</span>
-        <span class="metric">OpenRouter</span>
-        <span class="metric">Groq</span>
-        <span class="metric">Multi-Agent AI</span>
-    </div>
+        <div class="project-metrics">
+          <span class="metric">LLMs</span>
+          <span class="metric">Dev Tools</span>
+          <span class="metric">Prompt Engineering</span>
+        </div>
 
-    <div class="chart-box">
-        <canvas id="chart9"></canvas>
-    </div>
+        <div class="chart-box">
+          <canvas id="chart8"></canvas>
+        </div>
 
-    <div class="project-links" onclick="event.stopPropagation()">
-
-        <a
-            href="https://github.com/Harshithpatali/VCPG"
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali"
             target="_blank"
-            class="project-link">
+            class="project-link"
+          >
             GitHub
-        </a>
+          </a>
 
-        <a
-            href="https://vcpgv1.streamlit.app/dashboard"
+          <a
+            href="https://ai-readme-generator-wkz9wlcv4xkv9cdg9fpzeg.streamlit.app/"
             target="_blank"
-            class="project-link live">
+            class="project-link live"
+          >
             Live Demo ↗
-        </a>
+          </a>
+        </div>
+      </div>
 
-    </div>
 
-</div>
-
-      <div class="project-card" data-category="finance" onclick="openProject('tcs_financial_agent')">
+      <!-- =====================================================
+           PROJECT 10 — VCPG
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="tools"
+        onclick="openProject('vcpg')"
+      >
         <div class="project-header">
           <span class="project-num">10</span>
-          <span class="project-category">Finance AI · RAG</span>
+          <span class="project-category">
+            AI Developer Platform
+          </span>
         </div>
-        <div class="project-title">TCS Financial Intelligence Agent</div>
-        <p class="project-desc">Retrieval-Augmented Generation system transforming six years of TCS annual reports into a source-grounded conversational financial research assistant.</p>
+
+        <div class="project-title">
+          VCPG - Vibe Coding Prompt Generator
+        </div>
+
+        <p class="project-desc">
+          Production-ready multi-agent AI platform that transforms
+          software ideas into professional development blueprints,
+          architecture plans, implementation roadmaps, deployment
+          strategies, and detailed coding prompts using OpenRouter and Groq.
+        </p>
+
         <div class="project-metrics">
-          <span class="metric">RAG</span><span class="metric">ChromaDB</span><span class="metric">Groq LLM</span>
+          <span class="metric">FastAPI</span>
+          <span class="metric">Streamlit</span>
+          <span class="metric">OpenRouter</span>
+          <span class="metric">Groq</span>
+          <span class="metric">Multi-Agent AI</span>
         </div>
-        <div class="chart-box"><canvas id="chart10"></canvas></div>
-        <div class="project-links" onclick="event.stopPropagation()">
-          <a href="https://github.com/Harshithpatali/financial-intelligence-agent" target="_blank" class="project-link">GitHub</a>
-          <a href="https://financial-intelligence-agent-g.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
+
+        <div class="chart-box">
+          <canvas id="chart9"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali/VCPG"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://vcpgv1.streamlit.app/dashboard"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
+        </div>
+      </div>
+
+
+      <!-- =====================================================
+           PROJECT 11 — TCS FINANCIAL INTELLIGENCE
+           ===================================================== -->
+      <div
+        class="project-card"
+        data-category="finance"
+        onclick="openProject('tcs_financial_agent')"
+      >
+        <div class="project-header">
+          <span class="project-num">11</span>
+          <span class="project-category">
+            Finance AI · RAG
+          </span>
+        </div>
+
+        <div class="project-title">
+          TCS Financial Intelligence Agent
+        </div>
+
+        <p class="project-desc">
+          Retrieval-Augmented Generation system transforming six years
+          of TCS annual reports into a source-grounded conversational
+          financial research assistant.
+        </p>
+
+        <div class="project-metrics">
+          <span class="metric">RAG</span>
+          <span class="metric">ChromaDB</span>
+          <span class="metric">Groq LLM</span>
+        </div>
+
+        <div class="chart-box">
+          <canvas id="chart10"></canvas>
+        </div>
+
+        <div
+          class="project-links"
+          onclick="event.stopPropagation()"
+        >
+          <a
+            href="https://github.com/Harshithpatali/financial-intelligence-agent"
+            target="_blank"
+            class="project-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://financial-intelligence-agent-g.streamlit.app/"
+            target="_blank"
+            class="project-link live"
+          >
+            Live Demo ↗
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 </div>
-
 
 
 
@@ -1841,9 +2228,42 @@ makeChart('chart7',[30,50,67,80,91,96]);
 makeChart('chart8',[55,68,76,88,93,99]);
 makeChart('chart9',[44,60,72,85,93,98]);
 makeChart('chart10',[46,62,75,87,95,99]);
+makeChart('chart11',[52,64,73,84,92,98]);
 
 /* ── PROJECT DATA ────────────────────────────────────── */
 const projects={
+
+  retail_demand_inventory:{
+  badge:'Forecasting & Optimization',
+
+  title:'Retail Demand & Inventory Optimization',
+
+  sub:'End-to-end retail forecasting and inventory decision system using machine learning, demand uncertainty, and periodic-review optimization.',
+
+  overview:'Built on the M5 retail dataset, the system models a hardware-conscious subset of 200 item-store series and 388K feature rows. The forecasting experiment compares strong baselines with XGBoost and LightGBM, while a cost-aware periodic-review (R,S) inventory layer is evaluated through held-out simulation.',
+
+  features:[
+    'Time-Series Forecasting',
+    'Demand Uncertainty',
+    'Periodic-Review (R,S)',
+    'Inventory Simulation',
+    'Business Impact'
+  ],
+
+  tech:[
+    'Python',
+    'XGBoost',
+    'LightGBM',
+    'Pandas',
+    'Scikit-Learn',
+    'FastAPI',
+    'Streamlit'
+  ],
+
+  github:'https://github.com/Harshithpatali/retail-demand-inventory-optimization',
+
+  live:'https://retail-demand-inventory-optimization-v1.streamlit.app/'
+},
   qqq_transformer:{
     badge:'Quantitative AI',
     title:'QQQ Transformer Forecasting Platform',
