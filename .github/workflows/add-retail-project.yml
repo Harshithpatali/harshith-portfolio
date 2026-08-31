@@ -14,22 +14,33 @@ jobs:
   update-portfolio:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Update portfolio
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const path = 'index.html';
 
-      - name: Add retail project
-        shell: python
-        run: |
-          from pathlib import Path
+            const current = await github.rest.repos.getContent({
+              owner,
+              repo,
+              path,
+              ref: 'main'
+            });
 
-          path = Path("index.html")
-          text = path.read_text(encoding="utf-8")
+            if (Array.isArray(current.data)) {
+              throw new Error('index.html was unexpectedly returned as a directory.');
+            }
 
-          if "retail_demand_inventory" in text:
-              print("Retail project already present; nothing to do.")
-              raise SystemExit(0)
+            const text = Buffer.from(current.data.content, 'base64').toString('utf8');
 
-          card = r'''      <div class="project-card" data-category="analytics" onclick="openProject('retail_demand_inventory')">
+            if (text.includes("retail_demand_inventory")) {
+              console.log('Retail project already present.');
+              return;
+            }
+
+            const card = `      <div class="project-card" data-category="analytics" onclick="openProject('retail_demand_inventory')">
         <div class="project-header">
           <span class="project-num">11</span>
           <span class="project-category">Forecasting &amp; Optimization</span>
@@ -44,30 +55,31 @@ jobs:
           <a href="https://github.com/Harshithpatali/retail-demand-inventory-optimization" target="_blank" class="project-link">GitHub</a>
           <a href="https://retail-demand-inventory-optimization-v1.streamlit.app/" target="_blank" class="project-link live">Live Demo ↗</a>
         </div>
-      </div>
-'''
+      </div>\n\n`;
 
-          marker = "      <div class=\"project-card\" data-category=\"finance\" onclick=\"openProject('qqq_transformer')\">"
-          if marker not in text:
-              raise SystemExit("Project insertion marker not found.")
+            const cardMarker = `      <div class="project-card" data-category="finance" onclick="openProject('qqq_transformer')">`;
+            if (!text.includes(cardMarker)) {
+              throw new Error('Project card insertion marker not found.');
+            }
 
-          text = text.replace(marker, card + "\n" + marker, 1)
+            let updated = text.replace(cardMarker, card + cardMarker);
 
-          chart_marker = "makeChart('chart10',[46,62,75,87,95,99]);"
-          if chart_marker not in text:
-              raise SystemExit("Chart insertion marker not found.")
+            const chartMarker = "makeChart('chart10',[46,62,75,87,95,99]);";
+            if (!updated.includes(chartMarker)) {
+              throw new Error('Chart marker not found.');
+            }
 
-          text = text.replace(
-              chart_marker,
-              chart_marker + "\nmakeChart('chart11',[52,64,73,84,92,98]);",
-              1,
-          )
+            updated = updated.replace(
+              chartMarker,
+              chartMarker + "\nmakeChart('chart11',[52,64,73,84,92,98]);"
+            );
 
-          modal_marker = "  tcs_financial_agent:{"
-          if modal_marker not in text:
-              raise SystemExit("Modal insertion marker not found.")
+            const modalMarker = '  tcs_financial_agent:{';
+            if (!updated.includes(modalMarker)) {
+              throw new Error('Modal insertion marker not found.');
+            }
 
-          modal = r'''  retail_demand_inventory:{
+            const modal = `  retail_demand_inventory:{
     badge:'Forecasting & Optimization',
     title:'Retail Demand & Inventory Optimization',
     sub:'End-to-end retail forecasting and inventory decision system using machine learning, demand uncertainty, and periodic-review optimization.',
@@ -76,19 +88,20 @@ jobs:
     tech:['Python','XGBoost','LightGBM','Pandas','Scikit-Learn','FastAPI','Streamlit'],
     github:'https://github.com/Harshithpatali/retail-demand-inventory-optimization',
     live:'https://retail-demand-inventory-optimization-v1.streamlit.app/'
-  },
-'''
+  },\n`;
 
-          text = text.replace(modal_marker, modal + modal_marker, 1)
+            updated = updated.replace(modalMarker, modal + modalMarker);
 
-          path.write_text(text, encoding="utf-8")
-          print("Retail forecasting project added successfully.")
+            const encoded = Buffer.from(updated, 'utf8').toString('base64');
 
-      - name: Commit changes
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git diff --cached --quiet && echo "No changes to commit." || git commit -m "Add retail demand inventory project"
-          git push
+            await github.rest.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path,
+              message: 'Add retail demand inventory project to portfolio',
+              content: encoded,
+              sha: current.data.sha,
+              branch: 'main'
+            });
+
+            console.log('Retail forecasting project added successfully.');
