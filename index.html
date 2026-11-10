@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Harshith Devaraja — data science, applied machine learning, causal inference, graph analytics, wavelet signal processing and applied AI. Selected projects, methods and research interests.">
+<meta name="description" content="Harshith Devaraja — data science, statistical modelling, experimentation, customer analytics and predictive modelling. Selected projects and quantitative research.">
 <meta name="theme-color" content="#f5f3ed">
 <link rel="canonical" href="https://harshithpatali.github.io/harshith-portfolio/">
 <meta property="og:type" content="website">
@@ -209,10 +209,10 @@ footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(
 <main id="main">
 <section class="hero wrap" id="top">
  <div>
-  <div class="eyebrow">Data science · Applied machine learning · Quantitative research</div>
-  <h1>Good models start with <em>better questions.</em></h1>
-  <p class="hero-intro">I’m Harshith Devaraja, an Applied Mathematics &amp; Computing graduate. I build analytical systems that connect data quality, statistical reasoning and machine learning to decisions people can inspect and explain.</p>
-  <div class="hero-meta"><span>Karnataka, India</span><span>Open to Data Science, Analytics &amp; ML roles</span></div>
+  <div class="eyebrow">Data science · Statistics · Decision science</div>
+  <h1>Statistics first. <em>Better decisions follow.</em></h1>
+  <p class="hero-intro">I’m Harshith Devaraja, an M.Sc. Applied Mathematics &amp; Computing graduate focused on statistical inference, experimentation and customer analytics. I use Python and SQL to build evidence-led analyses, validate predictive models and connect quantitative findings to business decisions.</p>
+  <div class="hero-meta"><span>Karnataka, India</span><span>Open to Data Scientist, Decision Science &amp; Analytics roles</span></div>
   <div class="hero-actions"><a class="button primary" href="#featured">Explore selected work <span>↓</span></a><a class="button" href="resume.html">View résumé ↗</a><a class="button" href="mailto:harshikollur302@gmail.com">Get in touch ↗</a></div>
  </div>
  <div class="hero-art" aria-label="A diagram illustrating the portfolio's approach from raw data to decisions">
@@ -240,16 +240,16 @@ footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(
  </div>
 </section>
 <div class="wrap stats" aria-label="Portfolio summary">
- <div class="stat"><strong>3</strong><span>Flagship case studies</span></div>
- <div class="stat"><strong>18</strong><span>Selected projects &amp; systems</span></div>
+ <div class="stat"><strong>4</strong><span>Flagship case studies</span></div>
+ <div class="stat"><strong>11</strong><span>Additional projects &amp; systems</span></div>
  <div class="stat"><strong>1</strong><span>Active research direction</span></div>
 </div>
 
 <section id="featured" class="featured">
  <div class="wrap">
   <div class="section-heading">
-   <div><div class="eyebrow">01 / Selected work</div><h2>Three projects, examined closely.</h2></div>
-   <p>These are the projects that best show how I approach data problems: understand the product question, build a defensible analysis, measure against a baseline and explain the limits.</p>
+   <div><div class="eyebrow">01 / Selected work</div><h2>Four projects, examined closely.</h2></div>
+   <p>These projects show how I approach data problems: frame the decision, understand the data, apply statistical reasoning, validate against a baseline and communicate the limits.</p>
   </div>
   <div class="feature-grid">
  <article class="feature">
@@ -294,18 +294,33 @@ footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(
  </article>
  <article class="feature">
   <div>
-   <div class="feature-label">03 · Causal inference / experimentation</div>
-   <h3>Causal Experimentation Intelligence</h3>
-   <p>An experiment-validation and uplift workflow on an 80,000-row Criteo sample. It checks randomisation and covariate balance before estimating conversion lift, then compares S-, T- and X-learners and translates heterogeneous treatment estimates into a capacity-constrained campaign scenario.</p>
+   <div class="feature-label">03 · Causal inference / uplift modelling</div>
+   <h3>Causal Uplift Marketing Optimization</h3>
+   <p>A decision-science project using the 64,000-customer Hillstrom randomized email experiment. It compares treatment arms, estimates average effects and trains uplift models to rank customers by estimated heterogeneous treatment response.</p>
    <div class="feature-metrics">
-    <div><strong>80K</strong><span>Sample rows · 40K / arm</span></div>
-    <div><strong>+0.13 pp</strong><span>Observed conversion lift</span></div>
-    <div><strong>0.0041</strong><span>Two-proportion p-value</span></div>
+    <div><strong>64K</strong><span>Randomized customers</span></div>
+    <div><strong>0.002054</strong><span>Best held-out AUUC</span></div>
+    <div><strong>0.004129</strong><span>Best held-out Qini</span></div>
    </div>
-   <p class="feature-detail"><b>Experiment checks:</b> no sample-ratio mismatch (χ² p=1.00); all 12 pre-treatment features passed the |SMD| &lt; 0.1 balance threshold, with maximum absolute SMD 0.0134. The observed conversion rates were 0.3475% control and 0.4775% treatment; 95% CI for absolute lift was +0.041 to +0.219 percentage points.</p>
-   <p class="feature-detail"><b>Business translation:</b> the simulator scales ranked targeting into incremental conversions, contribution and ROI. In the reported configuration, top-10% targeting projects 18.5% ROI when scaled to 100,000 targeted users under $0.05 contact cost, $25 revenue per conversion and 40% margin.</p>
-   <div class="caveat"><b>Context:</b> the shipped sample is re-balanced to 50/50, while the source Criteo design is approximately 85% treated. The lift is an experimental-sample result; the 18.5% ROI is an assumption-sensitive scenario estimate, not realised campaign profit.</div>
-   <div class="feature-links"><a href="https://github.com/Harshithpatali/causal_experimentation_platform" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://causal-ai-customer-growth-intelligence.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
+   <p class="feature-detail"><b>Methods:</b> ATE analysis, T-Learner / two-model uplift, class transformation, LightGBM, Qini, AUUC and uplift-at-depth comparisons.</p>
+   <div class="caveat"><b>Interpretation:</b> customer-level uplift scores are estimated heterogeneous treatment effects, not directly observed individual effects. Policy estimates are based on the evaluation sample; campaign costs are unavailable, so the project does not claim realised net profit.</div>
+   <div class="feature-links"><a href="https://github.com/Harshithpatali/causal-uplift-marketing-optimization" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>
+  </div>
+ </article>
+ <article class="feature">
+  <div>
+   <div class="feature-label">04 · Forecasting / operations research</div>
+   <h3>Retail Demand &amp; Inventory Optimization</h3>
+   <p>A forecasting-to-decision workflow on the M5 retail dataset. It benchmarks global demand models against simple baselines, estimates uncertainty from out-of-sample residuals and evaluates a periodic-review inventory policy through simulation.</p>
+   <div class="feature-metrics">
+    <div><strong>200</strong><span>Item–store series</span></div>
+    <div><strong>−16.21%</strong><span>Modelled total cost</span></div>
+    <div><strong>+2.46 pp</strong><span>Service-level change</span></div>
+   </div>
+   <p class="feature-detail"><b>Forecast validation:</b> XGBoost achieved 28.08% WAPE on the validation period, 59.2% lower than the naive baseline. The prepared modelling subset contains 388,200 feature rows.</p>
+   <p class="feature-detail"><b>Decision evaluation:</b> on the held-out inventory simulation, the selected policy reduced modelled total cost by 16.21%, reduced stockout units by 30.65% and raised service level from 91.96% to 94.42%.</p>
+   <div class="caveat"><b>Assumptions:</b> inventory costs, lead time and review period are documented demonstration inputs, not calibrated economics or guaranteed savings for a real retailer.</div>
+   <div class="feature-links"><a href="https://github.com/Harshithpatali/retail-demand-inventory-optimization" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://retail-demand-inventory-optimization-v1.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://retail-demand-inventory-optimization.onrender.com/" target="_blank" rel="noopener noreferrer">API ↗</a></div>
   </div>
  </article>
 </div>
