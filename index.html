@@ -1,146 +1,496 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Harshith Devaraja — Data Scientist & Applied ML Engineer</title>
-<meta name="description" content="Harshith Devaraja builds data products across analytics, machine learning, graph intelligence, causal inference and applied AI. Explore selected projects, research and engineering work.">
-<meta name="theme-color" content="#07111d"><meta name="color-scheme" content="dark">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Harshith Devaraja — data science, applied machine learning, causal inference, graph analytics, wavelet signal processing and applied AI. Selected projects, methods and research interests.">
+<meta name="theme-color" content="#f5f3ed">
 <link rel="canonical" href="https://harshithpatali.github.io/harshith-portfolio/">
-<meta property="og:type" content="website"><meta property="og:title" content="Harshith Devaraja — Data Scientist & Applied ML Engineer"><meta property="og:description" content="Analytics · Graph Intelligence · Causal Science · Applied AI"><meta property="og:url" content="https://harshithpatali.github.io/harshith-portfolio/"><meta property="og:image" content="https://harshithpatali.github.io/harshith-portfolio/og-image.svg">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Harshith Devaraja — Data Scientist"><meta name="twitter:description" content="Turning data into defensible decisions and useful products."><meta name="twitter:image" content="https://harshithpatali.github.io/harshith-portfolio/og-image.svg">
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harshith Devaraja — Data Science & Applied ML">
+<meta property="og:description" content="A working portfolio of analytical systems, machine learning experiments and research interests.">
+<meta property="og:url" content="https://harshithpatali.github.io/harshith-portfolio/">
+<meta property="og:image" content="https://harshithpatali.github.io/harshith-portfolio/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Harshith Devaraja — Data Science & Applied ML</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07111d;--panel:#0b1a29;--panel2:#0e2234;--ink:#edf6ff;--muted:#91a7bb;--line:rgba(177,211,239,.14);--cyan:#64e1ed;--blue:#6c9cff;--lime:#b7f27a;--pink:#e5a1ff;--mono:"DM Mono",monospace;--sans:"DM Sans",sans-serif;--display:"Space Grotesk",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 12% 5%,rgba(45,140,190,.16),transparent 38%),radial-gradient(ellipse at 88% 34%,rgba(101,111,220,.13),transparent 34%),linear-gradient(180deg,#07111d,#081522 58%,#07111d)}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.mono{font-family:var(--mono)}.muted{color:var(--muted)}.kicker{font:500 .68rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}.kicker:before{content:"✳ ";color:var(--lime)}.gradient{background:linear-gradient(100deg,var(--cyan),#a6b8ff 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-#particles{position:fixed;inset:0;z-index:-1;width:100%;height:100%;opacity:.55;pointer-events:none}.progress{position:fixed;z-index:90;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--pink))}
-header{position:fixed;z-index:80;inset:0 0 auto;height:72px;background:rgba(7,17,29,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font:600 .8rem var(--mono);letter-spacing:.08em}.brand b{color:var(--cyan)}.navlinks{display:flex;gap:26px}.navlinks a{font:500 .68rem var(--mono);color:var(--muted);transition:.2s}.navlinks a:hover{color:var(--cyan)}.navright{display:flex;align-items:center;gap:10px}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 16px;border-radius:7px;font:600 .7rem var(--mono);border:1px solid var(--line);transition:.25s}.nav-cta{background:var(--cyan);color:#06121d;border-color:var(--cyan)}.btn.primary{background:var(--cyan);border-color:var(--cyan);color:#06121d}.btn:hover,.nav-cta:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(100,225,237,.16)}.btn.ghost{background:rgba(255,255,255,.025)}.menu{display:none;background:transparent;border:1px solid var(--line);border-radius:7px;padding:9px}
-.hero{min-height:810px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px;padding:130px 0 75px}.hero-copy{position:relative;z-index:2}.hero h1{font:600 clamp(4rem,8vw,7.5rem)/.92 var(--display);letter-spacing:-.075em;margin:22px 0 20px}.hero h1 span{display:block}.role{font:500 .83rem var(--mono);color:#bdd0df;margin:0 0 18px}.hero-copy>p{max-width:650px;color:var(--muted);font-size:1.02rem;line-height:1.9}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}.availability{display:flex;align-items:center;gap:9px;margin-top:34px;color:var(--muted);font:500 .66rem var(--mono)}.pulse{width:8px;height:8px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 6px rgba(183,242,122,.09);animation:pulse 2s infinite}@keyframes pulse{50%{box-shadow:0 0 0 11px rgba(183,242,122,0)}}
-.hero-art{min-height:510px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:min(440px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 30%,rgba(100,225,237,.28),rgba(108,156,255,.09) 42%,transparent 68%);filter:blur(2px);animation:float 8s ease-in-out infinite}.art-frame{position:relative;width:min(490px,100%);height:430px;border:1px solid rgba(149,213,241,.22);border-radius:20px;overflow:hidden;background:linear-gradient(145deg,rgba(13,36,55,.78),rgba(9,22,36,.92));box-shadow:0 35px 100px rgba(0,0,0,.42)}.art-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(100,225,237,.09),transparent 70%);transform:translateX(-100%);animation:shine 7s infinite}.art-photo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,14,24,.08),rgba(5,14,24,.95)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85") center/cover;opacity:.48;mix-blend-mode:screen}.art-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(100,225,237,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(100,225,237,.12) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(transparent,#000 20%,#000 80%,transparent)}.orbit{position:absolute;border:1px solid rgba(100,225,237,.5);border-radius:50%;width:270px;height:270px;left:50%;top:47%;transform:translate(-50%,-50%) rotate(-24deg);box-shadow:0 0 40px rgba(100,225,237,.12),inset 0 0 35px rgba(100,225,237,.08)}.orbit.two{width:355px;height:170px;transform:translate(-50%,-50%) rotate(38deg);border-color:rgba(229,161,255,.45)}.core{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#b8ffff,#4c9db5 45%,#192c58 75%);box-shadow:0 0 70px rgba(100,225,237,.55);font:700 1.6rem var(--display);color:#07111d}.node{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--lime);box-shadow:0 0 18px var(--lime)}.n1{left:18%;top:26%}.n2{right:17%;top:33%;background:var(--pink);box-shadow:0 0 18px var(--pink)}.n3{left:25%;bottom:21%;background:var(--cyan)}.n4{right:23%;bottom:19%;background:var(--blue);box-shadow:0 0 18px var(--blue)}.art-label{position:absolute;left:22px;bottom:22px;font:500 .62rem/1.9 var(--mono);color:#c5d8e6}.art-label strong{color:var(--cyan);font-weight:500}.floating-card{position:absolute;right:-20px;top:35px;padding:13px 16px;border:1px solid var(--line);border-radius:10px;background:rgba(7,17,29,.88);backdrop-filter:blur(12px);font:500 .62rem/1.8 var(--mono);box-shadow:0 15px 40px rgba(0,0,0,.3)}.floating-card b{display:block;color:var(--lime);font-size:.9rem}.float-bottom{position:absolute;left:-22px;bottom:30px;padding:14px 17px;background:rgba(7,17,29,.9);border:1px solid var(--line);border-radius:10px;font:500 .62rem/1.8 var(--mono)}.float-bottom strong{color:var(--cyan)}@keyframes float{50%{transform:translateY(-14px) scale(1.02)}}@keyframes shine{40%,100%{transform:translateX(100%)}}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 0 80px}.stat{border-top:1px solid var(--line);padding:18px 12px 0}.stat strong{display:block;font:600 2rem var(--display);letter-spacing:-.06em}.stat span{font:500 .6rem var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section-head h2{font:600 clamp(2.5rem,5vw,4.3rem)/1 var(--display);letter-spacing:-.06em;margin:13px 0 0}.section-head p{max-width:490px;color:var(--muted);font-size:.86rem;margin:0}.section-alt{background:linear-gradient(180deg,rgba(13,34,52,.52),rgba(8,21,34,.35));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.project{position:relative;overflow:hidden;padding:25px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,rgba(13,34,52,.88),rgba(9,23,37,.94));min-height:405px;display:flex;flex-direction:column;transition:.3s}.project:hover{transform:translateY(-6px);border-color:rgba(100,225,237,.45);box-shadow:0 24px 65px rgba(0,0,0,.26)}.project.featured{grid-column:span 2;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;min-height:390px}.project:after{content:"";position:absolute;width:220px;height:220px;right:-120px;top:-120px;border-radius:50%;background:rgba(100,225,237,.07);filter:blur(15px);pointer-events:none}.project-copy{display:flex;flex-direction:column;min-height:100%}.project-meta{display:flex;align-items:center;justify-content:space-between;font:500 .62rem var(--mono);color:var(--cyan);letter-spacing:.12em}.project h3{font:600 1.8rem/1.12 var(--display);letter-spacing:-.04em;margin:17px 0 11px}.project p{font-size:.81rem;color:var(--muted);margin:0 0 17px}.project .stack{font:500 .61rem/2 var(--mono);color:#c1d5e3;margin:2px 0 18px}.project-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto}.project-links a{font:500 .65rem var(--mono);color:var(--cyan)}.project-links a:hover{text-decoration:underline}.project-visual{position:relative;min-height:220px;border:1px solid rgba(143,204,232,.14);border-radius:11px;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(100,225,237,.12),transparent 65%),#081725}.project-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.23;mix-blend-mode:screen}.viz-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,18,29,.05),rgba(6,18,29,.65))}.viz-label{position:absolute;left:15px;bottom:13px;font:500 .58rem var(--mono);color:var(--cyan);letter-spacing:.1em}.viz-svg{position:absolute;inset:0;width:100%;height:100%}.project.featured .project-visual{min-height:320px;align-self:stretch}.project.featured h3{font-size:2.15rem}
-.metric-strip{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 15px}.metric-chip{padding:7px 9px;border-radius:6px;background:rgba(100,225,237,.07);border:1px solid rgba(100,225,237,.17);font:500 .6rem var(--mono);color:#c5edf0}.truth{padding:14px 15px;border-left:2px solid var(--lime);background:rgba(183,242,122,.055);border-radius:0 8px 8px 0;color:#b8c9d5;font-size:.7rem;line-height:1.7;margin-top:10px}.truth b{color:var(--lime)}
-.chart-panel{display:grid;grid-template-columns:1fr 1fr;gap:18px}.chart-card{padding:24px;border:1px solid var(--line);border-radius:14px;background:rgba(11,26,41,.85)}.chart-card h3{font:600 1.15rem var(--display);margin:0 0 5px}.chart-card p{color:var(--muted);font-size:.72rem;margin:0 0 20px}.bar-row{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:12px;margin:14px 0;font:500 .62rem var(--mono);color:var(--muted)}.bar{height:8px;background:#152c40;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;width:var(--w);border-radius:10px;background:linear-gradient(90deg,var(--cyan),var(--blue));animation:grow 1.3s ease both;transform-origin:left}@keyframes grow{from{transform:scaleX(.03)}}.bar-row b{text-align:right;color:var(--ink);font-weight:500}.chart-note{font:500 .6rem/1.8 var(--mono);color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:18px}
-.process{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.process article{padding:18px 15px;border:1px solid var(--line);border-radius:10px;background:rgba(11,26,41,.72)}.process span{font:500 .62rem var(--mono);color:var(--cyan)}.process h3{font:600 .85rem var(--display);margin:11px 0 6px}.process p{font-size:.68rem;color:var(--muted);margin:0}
-.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.skill{padding:21px;border:1px solid var(--line);border-radius:12px;background:rgba(11,26,41,.72)}.skill .icon{font-size:1.2rem;color:var(--cyan)}.skill h3{font:600 .9rem var(--display);margin:11px 0 8px}.skill p{font:500 .64rem/2 var(--mono);color:var(--muted);margin:0}
-.timeline{border-top:1px solid var(--line)}.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:23px 0;border-bottom:1px solid var(--line)}.timeline-item time{font:500 .63rem var(--mono);color:var(--cyan)}.timeline-item h3{font:600 1rem var(--display);margin:0}.timeline-item h4{font:500 .66rem var(--mono);color:var(--muted);margin:4px 0 8px}.timeline-item p{color:var(--muted);font-size:.77rem;margin:0}
-.contact{padding:70px 0 100px}.contact-box{position:relative;overflow:hidden;padding:48px;border:1px solid rgba(100,225,237,.24);border-radius:18px;background:radial-gradient(circle at 90% 20%,rgba(108,156,255,.18),transparent 35%),linear-gradient(120deg,#0c2638,#0a1a2a)}.contact-box h2{font:600 clamp(2.8rem,6vw,5rem)/.98 var(--display);letter-spacing:-.06em;margin:15px 0}.contact-box p{max-width:620px;color:var(--muted)}.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.social{display:flex;gap:9px;margin-top:30px}.social a{width:39px;height:39px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;font:600 .75rem var(--mono);color:var(--muted)}.social a:hover{border-color:var(--cyan);color:var(--cyan)}
-footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .59rem var(--mono);color:#71879b}.footer-row{display:flex;justify-content:space-between;gap:20px}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}.backtop{position:fixed;z-index:50;right:20px;bottom:20px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#10283a;color:var(--cyan);display:none;cursor:pointer}.backtop.show{display:block}
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:140px;gap:20px}.hero-art{min-height:480px}.project.featured{grid-template-columns:1fr}.project.featured .project-visual{min-height:250px;grid-row:1}.process{grid-template-columns:repeat(3,1fr)}.skills{grid-template-columns:repeat(2,1fr)}.navlinks{gap:14px}.floating-card{right:0}.float-bottom{left:0}}
-@media(max-width:640px){.wrap{width:calc(100% - 30px)}header{height:64px}.navlinks{display:none}.menu{display:block}.nav-cta{display:none}.hero{min-height:auto;padding:125px 0 45px}.hero h1{font-size:clamp(3.7rem,18vw,5.7rem)}.hero-art{min-height:390px}.art-frame{height:350px}.floating-card{right:-2px;top:8px}.float-bottom{bottom:0}.stats{grid-template-columns:repeat(2,1fr);padding-bottom:35px}.stat strong{font-size:1.7rem}section{padding:75px 0}.section-head{display:block}.section-head p{margin-top:15px}.project-grid,.chart-panel{grid-template-columns:1fr}.project.featured{grid-column:auto}.project{min-height:0;padding:20px}.project-visual{min-height:190px}.process{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:1fr 1fr}.timeline-item{grid-template-columns:1fr;gap:6px}.contact-box{padding:29px 23px}.footer-row{display:block}.footer-row span{display:block;margin-top:8px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-
-/* Personal portfolio refinement: editorial, restrained, content-first */
-:root{--bg:#f4f2ec;--panel:#fffefa;--panel2:#eeece5;--ink:#202721;--muted:#626b62;--line:rgba(31,43,34,.16);--cyan:#38634d;--blue:#657c66;--lime:#b6c4a2;--pink:#b17d68;--mono:"DM Mono",monospace;--sans:"DM Sans",Arial,sans-serif;--display:"DM Sans",Arial,sans-serif}
-body{background:#f4f2ec;color:#202721}
-body:before{background:#f4f2ec}
-#particles,.hero-art,.orb,.art-frame,.floating-card,.float-bottom{display:none!important}
-.progress{background:#38634d}
-header{background:rgba(244,242,236,.96);backdrop-filter:none;border-bottom:1px solid var(--line)}
-.brand b,.kicker,.project-meta,.project-links a,.timeline-item time{color:#38634d}
-.kicker:before{content:"";display:none}
-.navlinks a{color:#4f5c52}
-.nav-cta,.btn.primary{background:#294b38;color:#fff;border-color:#294b38}
-.btn.ghost{border-color:var(--line);background:transparent}
-.hero{min-height:610px;grid-template-columns:1fr;padding:145px 0 70px}
-.hero h1{font-size:clamp(3.8rem,8vw,6.4rem);letter-spacing:-.065em}
-.gradient{background:none;color:#38634d}
-.hero-copy>p{color:#525e55}
-.availability{color:#536054}
-.pulse{background:#65805e;box-shadow:none;animation:none}
-.stats{padding-bottom:55px}
-.stat{border-top:1px solid var(--line)}
-.stat strong{color:#294b38}
-section{padding:82px 0}
-.section-alt{background:#ebe9e1;border-color:var(--line)}
-.project-grid{gap:0;border-top:1px solid var(--line)}
-.project,.project.featured{grid-column:auto;display:flex;min-height:0;padding:27px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;transform:none}
-.project:after{display:none}
-.project-visual{display:none!important}
-.project h3{font-size:1.55rem;letter-spacing:-.035em;margin:11px 0 8px}
-.project p{max-width:780px;color:#566158}
-.metric-chip{background:#e6ebe3;border:1px solid #d1dbcf;color:#355440}
-.stack{color:#58675d!important}
-.truth{background:#e9eee6;border-left-color:#68805f;color:#4c5b50}
-.truth b{color:#355440}
-.chart-card,.process article,.skill{background:#fbfaf6;border-color:var(--line);border-radius:5px;box-shadow:none}
-.bar{background:#e3e5de}.bar i{background:#587b60}
-.process{grid-template-columns:repeat(3,1fr)}
-.timeline{border-color:var(--line)}
-.timeline-item{border-color:var(--line)}
-.contact-box{background:#e7ebe3;border-color:#cbd4c8;border-radius:6px}
-.contact-box h2{color:#202721}
-.contact-box p{color:#566158}
-.social a{border-color:#c6cec3;color:#405746}
-footer{border-color:var(--line);color:#68736a}
-.reveal{opacity:1;transform:none}
-.project:hover{transform:none;box-shadow:none;border-color:var(--line)}
-.btn:hover,.nav-cta:hover{transform:none;box-shadow:none;opacity:.88}
-.orb,.art-frame:before,.pulse,.bar i{animation:none!important}
-.research-copy{max-width:850px;padding:25px 0 5px;border-top:1px solid var(--line);color:#505d53}
-.research-copy strong{color:#294b38;font-size:1.08rem}
-.research-copy ul{padding-left:21px;line-height:1.9}
-.research-note{font:500 .68rem var(--mono);color:#68736a;border-left:2px solid #8c9a82;padding-left:13px;margin-top:20px}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.hero{min-height:0;padding:115px 0 40px}.project{padding:22px 0}.process{grid-template-columns:1fr 1fr}.navlinks{background:#f4f2ec!important}.stats{padding-bottom:25px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+:root{
+ --paper:#f5f3ed;--surface:#fffefa;--surface-2:#ecebe3;--ink:#202821;--muted:#626b63;--faint:#858d84;
+ --line:#d8dcd3;--green:#315a43;--green-2:#52735a;--rust:#a95e45;--blue:#49677e;--gold:#a88542;
+ --sans:"DM Sans",Arial,sans-serif;--serif:"Newsreader",Georgia,serif;--mono:"DM Mono",monospace;
+ --max:1160px;--shadow:0 18px 50px rgba(36,48,38,.07)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.68 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img,svg{max-width:100%}
+::selection{background:#d8e4d6;color:var(--ink)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:white;padding:9px 13px;z-index:1000}
+.skip:focus{left:10px}
+.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+.mono{font-family:var(--mono)}
+.eyebrow{font:500 .67rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.13em;color:var(--green)}
+.eyebrow:before{content:"";display:inline-block;width:18px;height:1px;background:currentColor;vertical-align:middle;margin:0 9px 3px 0}
+.smallcaps{font:500 .65rem var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+header{height:76px;position:sticky;top:0;z-index:100;background:rgba(245,243,237,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.wordmark{font:500 .78rem var(--mono);letter-spacing:.04em;white-space:nowrap}
+.wordmark b{color:var(--green);font-weight:500}
+.navlinks{display:flex;align-items:center;gap:26px}
+.navlinks a{font:500 .66rem var(--mono);color:var(--muted);transition:color .18s}
+.navlinks a:hover,.navlinks a:focus-visible{color:var(--green)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.nav-cv{font:500 .65rem var(--mono);padding:9px 12px;border:1px solid #bdc9bd;border-radius:3px;color:var(--green)}
+.menu-toggle{display:none;border:1px solid var(--line);background:transparent;border-radius:3px;padding:8px 10px;color:var(--ink)}
+.hero{padding:86px 0 52px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;min-height:610px}
+.hero h1{font:500 clamp(3.5rem,7vw,6.6rem)/.94 var(--serif);letter-spacing:-.055em;margin:22px 0 23px;max-width:770px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero-intro{font-size:1rem;line-height:1.9;color:#4d584f;max-width:680px;margin:0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:20px;font:500 .66rem var(--mono);color:var(--muted)}
+.hero-meta span+span:before{content:"·";margin-right:20px;color:var(--rust)}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:31px}
+.button{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--line);border-radius:3px;font:500 .68rem var(--mono);transition:background .18s,border-color .18s}
+.button.primary{background:var(--green);border-color:var(--green);color:#fff}
+.button:hover{background:#e8ede5;border-color:#9eae9f;color:var(--green)}
+.button.primary:hover{background:#244b35;color:#fff}
+.hero-art{position:relative;min-width:0}
+.diagram-sheet{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:22px 22px 18px;transform:rotate(.5deg)}
+.sheet-head{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:12px;font:500 .62rem var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.sheet-title{font:500 1.4rem var(--serif);margin:16px 0 5px}
+.sheet-sub{font-size:.72rem;color:var(--muted);margin:0 0 15px}
+.diagram-svg{display:block;width:100%;height:auto}
+.sheet-foot{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:11px;margin-top:6px;font:500 .59rem var(--mono);color:var(--faint)}
+.hero-note{position:absolute;left:-22px;bottom:-25px;padding:12px 15px;background:#e8ebe2;border:1px solid #d1d9cd;font:500 .63rem/1.7 var(--mono);color:#46594a;max-width:215px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:3px auto 0}
+.stat{padding:18px 20px 20px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:24px}
+.stat strong{display:block;font:500 1.7rem var(--serif);letter-spacing:-.04em;color:var(--green)}
+.stat span{font:500 .62rem var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+section{padding:96px 0}
+.section-heading{display:grid;grid-template-columns:.82fr 1.18fr;gap:45px;align-items:end;margin-bottom:38px}
+.section-heading h2{font:500 clamp(2.5rem,4.6vw,4rem)/1 var(--serif);letter-spacing:-.045em;margin:12px 0 0}
+.section-heading p{margin:0 0 3px;color:var(--muted);font-size:.88rem;max-width:640px}
+.section-index{font:500 .64rem var(--mono);color:var(--rust)}
+.featured{background:#ecebe3;border-block:1px solid var(--line)}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feature{background:var(--surface);border:1px solid var(--line);padding:25px;position:relative;min-width:0}
+.feature:first-child{grid-column:span 2;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:31px}
+.feature-label{font:500 .63rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+.feature h3{font:500 1.75rem/1.12 var(--serif);letter-spacing:-.025em;margin:13px 0}
+.feature p{font-size:.81rem;color:var(--muted);margin:0 0 13px}
+.feature-art{background:#f1f2ec;border:1px solid #e0e4dc;padding:12px}
+.feature-art svg{display:block;width:100%;height:auto}
+.feature-metrics{display:flex;flex-wrap:wrap;gap:9px 21px;padding:13px 0 12px;margin:15px 0;border-block:1px solid var(--line)}
+.feature-metrics div{min-width:92px}
+.feature-metrics strong{display:block;font:500 1.15rem var(--serif);color:var(--green)}
+.feature-metrics span{display:block;font:500 .56rem var(--mono);letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.caveat{border-left:2px solid var(--rust);padding:9px 12px;background:#f7f1ed;color:#66554d;font-size:.7rem;line-height:1.65;margin:13px 0}
+.feature-links,.project-links{display:flex;flex-wrap:wrap;gap:9px 16px;margin-top:15px}
+.feature-links a,.project-links a{font:500 .63rem var(--mono);color:var(--green)}
+.feature-links a:hover,.project-links a:hover{text-decoration:underline;text-underline-offset:3px}
+.feature details{margin-top:14px}
+details summary{cursor:pointer;color:var(--green);font:500 .62rem var(--mono);list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary:after{content:" +";color:var(--rust)}
+details[open] summary:after{content:" −"}
+.detail-text{font-size:.74rem;color:var(--muted);padding:10px 0 0;line-height:1.75}
+.library-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
+.filters{display:flex;flex-wrap:wrap;gap:7px}
+.filter{border:1px solid var(--line);background:transparent;padding:8px 11px;border-radius:3px;color:var(--muted);font:500 .6rem var(--mono);cursor:pointer}
+.filter[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.project-count{font:500 .62rem var(--mono);color:var(--muted);white-space:nowrap}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.project-card{padding:21px 20px 19px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,254,250,.55);display:flex;flex-direction:column;min-height:365px}
+.project-card[hidden]{display:none}
+.project-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.project-number{font:500 .65rem var(--mono);color:var(--rust)}
+.project-category{font:500 .56rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:right}
+.project-card h3{font:500 1.35rem/1.12 var(--serif);margin:22px 0 10px;letter-spacing:-.02em}
+.project-description{font-size:.74rem;color:var(--muted);line-height:1.75;margin:0 0 15px}
+.project-evidence{font:500 .61rem/1.6 var(--mono);color:var(--green);padding:9px 0;border-block:1px solid var(--line);margin-top:auto}
+.project-impact{font-size:.68rem;line-height:1.7;color:#566057;margin:11px 0}
+.project-stack{font:500 .56rem/1.8 var(--mono);color:var(--faint);display:block;margin-top:12px}
+.project-bottom{margin-top:auto}
+.research{background:#202d26;color:#f4f2eb}
+.research .eyebrow,.research .section-index{color:#b8c8af}
+.research .section-heading p{color:#c4cbc1}
+.research .section-heading h2{color:#fbfaf5}
+.research-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.research-copy{max-width:620px}
+.research-copy h3{font:500 1.8rem/1.1 var(--serif);margin:10px 0}
+.research-copy p{color:#c6cec5;font-size:.83rem}
+.research-questions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.question{border:1px solid rgba(233,240,229,.22);padding:13px 14px;font-size:.71rem;color:#e6e9e0}
+.question b{display:block;color:#b9caa9;font:500 .62rem var(--mono);margin-bottom:5px}
+.research-visual{background:#2a3930;border:1px solid rgba(233,240,229,.2);padding:20px}
+.research-visual p{font:500 .6rem var(--mono);color:#c2cfc0;margin:0 0 14px;text-transform:uppercase;letter-spacing:.08em}
+.research-note{font:500 .62rem/1.75 var(--mono);color:#c7d0c5;border-top:1px solid rgba(233,240,229,.18);padding-top:13px;margin-top:14px}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.method{padding:19px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.method .num{font:500 .62rem var(--mono);color:var(--rust)}
+.method h3{font:500 1.18rem var(--serif);margin:12px 0 5px}
+.method p{font-size:.71rem;color:var(--muted);margin:0}
+.skills{background:#ecebe3;border-block:1px solid var(--line)}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.skill h3{font:500 1.15rem var(--serif);margin:0 0 9px}
+.skill p{font-size:.7rem;line-height:1.95;color:var(--muted);margin:0}
+.timeline{border-top:1px solid var(--line)}
+.timeline-row{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:19px 0;border-bottom:1px solid var(--line)}
+.timeline-row time{font:500 .63rem var(--mono);color:var(--green)}
+.timeline-row h3{font:500 1.1rem var(--serif);margin:0}
+.timeline-row p{font-size:.75rem;color:var(--muted);margin:6px 0 0}
+.contact-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;background:#e4e9e0;padding:39px;border:1px solid #cbd5c9}
+.contact-panel h2{font:500 clamp(2.7rem,5vw,4.7rem)/.98 var(--serif);letter-spacing:-.05em;margin:13px 0}
+.contact-panel p{font-size:.83rem;color:#536055;max-width:590px}
+.contact-items{display:flex;flex-direction:column;gap:10px}
+.contact-items a{padding:12px 13px;border:1px solid #c3cec1;font:500 .65rem var(--mono);color:var(--green);display:flex;justify-content:space-between;gap:15px}
+.contact-items a:hover{background:#f5f7f1}
+footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(--mono);color:var(--faint)}
+.footer-row{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:920px){
+ .hero{grid-template-columns:1fr;gap:38px;padding-top:70px}.hero-art{max-width:680px}
+ .feature:first-child{grid-template-columns:1fr}.project-grid{grid-template-columns:repeat(2,1fr)}
+ .skill-grid{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+ .wrap{width:calc(100% - 32px)}header{height:66px}.navlinks{display:none}
+ .navlinks.open{display:flex;position:absolute;top:66px;left:0;right:0;padding:20px 24px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}
+ .menu-toggle{display:block}.nav-cv{display:none}
+ .hero{padding:58px 0 36px;min-height:0}.hero h1{font-size:clamp(3.3rem,16vw,5.2rem)}
+ .hero-note{left:8px;bottom:-23px}.stats{grid-template-columns:1fr 1fr}
+ .stat:last-child{grid-column:span 2;border-left:0;border-top:1px solid var(--line);padding-left:0}
+ section{padding:72px 0}.section-heading{grid-template-columns:1fr;gap:14px;margin-bottom:26px}
+ .feature-grid{grid-template-columns:1fr}.feature:first-child{grid-column:auto;padding:22px}
+ .feature{padding:20px}.library-head{align-items:flex-start;flex-direction:column}
+ .project-grid{grid-template-columns:1fr}.project-card{min-height:0}
+ .research-grid{grid-template-columns:1fr}.research-questions{grid-template-columns:1fr}
+ .method-grid{grid-template-columns:1fr 1fr}.timeline-row{grid-template-columns:1fr;gap:5px}
+ .contact-panel{grid-template-columns:1fr;padding:25px 21px}.footer-row{display:block}.footer-row span{display:block;margin-top:7px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<canvas id="particles" aria-hidden="true"></canvas><div class="progress" id="progress"></div>
-<header><div class="wrap nav"><a class="brand" href="#home"><b>HD</b> / HARSHITH.DEVARAJA</a><nav class="navlinks" aria-label="Primary navigation"><a href="#work">PROJECTS</a><a href="#evidence">EVIDENCE</a><a href="#method">METHOD</a><a href="#skills">STACK</a><a href="#about">ABOUT</a><a href="#research">RESEARCH</a><a href="resume.html">RÉSUMÉ</a></nav><div class="navright"><a class="nav-cta" href="#contact">LET'S TALK ↗</a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></div></div></header>
-<main id="home">
-<section class="hero wrap">
-<div class="hero-copy"><div class="kicker">DATA SCIENCE · APPLIED MACHINE LEARNING · CAUSAL AI</div><h1>Harshith<span class="gradient">Devaraja.</span></h1><div class="role">DATA SCIENTIST  /  ML ENGINEER  /  M.Sc. APPLIED MATHEMATICS & COMPUTING</div><p>I turn complex data into decisions people can defend. My work connects statistical thinking, customer intelligence, graph analytics and machine learning with the engineering needed to make useful products.</p><div class="hero-actions"><a class="btn primary" href="#work">EXPLORE MY WORK ↘</a><a class="btn ghost" href="resume.html" target="_blank" rel="noopener">VIEW RÉSUMÉ ↗</a><a class="btn ghost" href="https://github.com/Harshithpatali" target="_blank" rel="noopener">GITHUB ↗</a></div><div class="availability"><i class="pulse"></i> OPEN TO DATA SCIENCE · ML · ANALYTICS OPPORTUNITIES</div></div>
-<div class="hero-art"><div class="orb"></div><div class="art-frame"><div class="art-photo"></div><div class="art-grid"></div><div class="orbit"></div><div class="orbit two"></div><div class="core">HD</div><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i><i class="node n4"></i><div class="art-label"><strong>INTELLIGENCE SYSTEMS / 001</strong><br>DATA → SIGNAL → DECISION<br>STATISTICS · ML · GRAPH · CAUSAL</div></div><div class="floating-card">MODEL MINDSET<b>MEASURE FIRST</b>Validate · Explain · Deploy</div><div class="float-bottom">BUILDING WITH <strong>PYTHON + SQL</strong><br>SHIPPING WITH APIS + DASHBOARDS</div></div>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+ <div class="wrap nav">
+  <a class="wordmark" href="#top"><b>HD</b> / HARSHITH DEVARAJA</a>
+  <nav class="navlinks" id="navlinks" aria-label="Primary navigation">
+   <a href="#featured">SELECTED WORK</a><a href="#projects">PROJECT INDEX</a><a href="#research">RESEARCH</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
+  </nav>
+  <div class="nav-actions"><a class="nav-cv" href="resume.html">RÉSUMÉ ↗</a><button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">MENU</button></div>
+ </div>
+</header>
+<main id="main">
+<section class="hero wrap" id="top">
+ <div>
+  <div class="eyebrow">Data science · Applied machine learning · Quantitative research</div>
+  <h1>Good models start with <em>better questions.</em></h1>
+  <p class="hero-intro">I’m Harshith Devaraja, an Applied Mathematics &amp; Computing graduate. I build analytical systems that connect data quality, statistical reasoning and machine learning to decisions people can inspect and explain.</p>
+  <div class="hero-meta"><span>Karnataka, India</span><span>Open to Data Science, Analytics &amp; ML roles</span></div>
+  <div class="hero-actions"><a class="button primary" href="#featured">Explore selected work <span>↓</span></a><a class="button" href="resume.html">View résumé ↗</a><a class="button" href="mailto:harshikollur302@gmail.com">Get in touch ↗</a></div>
+ </div>
+ <div class="hero-art" aria-label="A diagram illustrating the portfolio's approach from raw data to decisions">
+  <div class="diagram-sheet">
+   <div class="sheet-head"><span>Working model / 001</span><span>Evidence before claims</span></div>
+   <h2 class="sheet-title">From observation to decision</h2>
+   <p class="sheet-sub">A recurring pattern across my projects: make each transformation inspectable.</p>
+   <svg class="diagram-svg" viewBox="0 0 520 270" role="img" aria-label="Flow diagram of source data, inference, validation and decision">
+    <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#53745b" stroke-width="1"/></marker></defs>
+    <path d="M125 120 H195 M255 120 H325 M385 120 H445" fill="none" stroke="#78907a" stroke-width="1.7" marker-end="url(#arrow)"/>
+    <g font-family="DM Mono,monospace" font-size="10" text-anchor="middle">
+      <rect x="8" y="77" width="117" height="86" rx="2" fill="#edf0e8" stroke="#cbd5c8"/><text x="66" y="105" fill="#315a43">01 / SOURCE</text><text x="66" y="127" fill="#28342b">Raw data</text><text x="66" y="145" fill="#788276" font-size="8">grain · quality</text>
+      <rect x="195" y="77" width="60" height="86" rx="2" fill="#f4eee4" stroke="#ded1bc"/><text x="225" y="105" fill="#a95e45">02</text><text x="225" y="127" fill="#28342b">Model</text><text x="225" y="145" fill="#788276" font-size="8">signal</text>
+      <rect x="325" y="77" width="60" height="86" rx="2" fill="#e9eef0" stroke="#c9d3d7"/><text x="355" y="105" fill="#49677e">03</text><text x="355" y="127" fill="#28342b">Test</text><text x="355" y="145" fill="#788276" font-size="8">baseline</text>
+      <rect x="445" y="77" width="67" height="86" rx="2" fill="#edf0e8" stroke="#cbd5c8"/><text x="478" y="105" fill="#315a43">04</text><text x="478" y="127" fill="#28342b">Decision</text><text x="478" y="145" fill="#788276" font-size="8">context</text>
+    </g>
+    <path d="M66 183 V213 H478 V183" stroke="#bdc8bb" fill="none" stroke-dasharray="3 5"/>
+    <g fill="#6b776c" font-family="DM Mono,monospace" font-size="9"><text x="66" y="232">DATA</text><text x="210" y="232">INFERENCE</text><text x="352" y="232">EVALUATION</text><text x="478" y="232" text-anchor="end">ACTION</text></g>
+    <path d="M20 35 C65 17 90 55 129 35 S194 17 230 35 S297 53 333 35 S399 17 435 35 S480 51 500 35" fill="none" stroke="#9aa994" stroke-width="1.2"/>
+    <path d="M20 43 C65 25 90 63 129 43 S194 25 230 43 S297 61 333 43 S399 25 435 43 S480 59 500 43" fill="none" stroke="#c6b08a" stroke-width=".8"/>
+   </svg>
+   <div class="sheet-foot"><span>STATISTICS / SYSTEMS / PRODUCT THINKING</span><span>FIG. 01</span></div>
+  </div>
+  <div class="hero-note">I care about the baseline, the failure modes and the assumptions behind every number.</div>
+ </div>
 </section>
-<div class="wrap stats">
-<div class="stat"><strong>80K</strong><span>Experiment records analysed</span></div><div class="stat"><strong>16+</strong><span>SQL build stages · Olist platform</span></div><div class="stat"><strong>3</strong><span>Flagship decision-science projects</span></div><div class="stat"><strong>END → END</strong><span>Research to deployed product</span></div>
+<div class="wrap stats" aria-label="Portfolio summary">
+ <div class="stat"><strong>3</strong><span>Flagship case studies</span></div>
+ <div class="stat"><strong>14</strong><span>Selected projects &amp; systems</span></div>
+ <div class="stat"><strong>1</strong><span>Active research direction</span></div>
 </div>
-<section id="work" class="section-alt"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">01 / SELECTED WORK</div><h2>Projects with a point of view.</h2></div><p>Three flagship projects show how I approach customer risk, marketplace analytics and causal decision-making. Each card links to the source code; live demos are included where available.</p></div>
-<div class="project-grid">
-<article class="project featured reveal"><div class="project-copy"><div class="project-meta"><span>01 / GRAPH INTELLIGENCE</span><span>FLAGSHIP</span></div><h3>Customer Intelligence & Graph Anomaly Lab</h3><p>An investigation workspace for customer behaviour, segmentation, anomaly prioritisation and shared-entity networks. It combines customer-level profiles with device/IP relationship analysis so analysts can move from a suspicious signal to its surrounding context.</p><div class="metric-strip"><span class="metric-chip">50K transaction graph cap</span><span class="metric-chip">Isolation Forest + LOF</span><span class="metric-chip">User · Device · IP graph</span></div><div class="stack">PYTHON · PANDAS · SCIKIT-LEARN · NETWORKX · STREAMLIT · PARQUET</div><div class="truth"><b>Model integrity:</b> the historical fraud label is excluded from the current unsupervised customer intelligence workflow. Risk scores are cohort-relative review signals, not calibrated fraud probabilities.</div><div class="project-links"><a href="https://github.com/Harshithpatali/Graph-anomaly-supervised-neural-prediction" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://graph-anomaly-supervised-neural-prediction-v1.streamlit.app/" target="_blank" rel="noopener">LIVE DASHBOARD ↗</a></div></div><div class="project-visual"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=85" alt="Illuminated network infrastructure" loading="lazy"><div class="viz-overlay"></div><svg class="viz-svg" viewBox="0 0 500 320" role="img" aria-label="Illustrative customer device and IP network"><g stroke="#64e1ed" stroke-opacity=".45" stroke-width="1.5"><path d="M90 82 220 65 350 100 415 205 290 250 145 220 90 82M220 65 290 250M90 82 145 220M350 100 145 220M415 205 220 65M90 82 350 100M350 100 290 250"/></g><g fill="#64e1ed"><circle cx="90" cy="82" r="8"/><circle cx="220" cy="65" r="7"/><circle cx="350" cy="100" r="9"/><circle cx="415" cy="205" r="7"/><circle cx="290" cy="250" r="8"/><circle cx="145" cy="220" r="7"/></g><g fill="#b7f27a"><circle cx="220" cy="65" r="3"/><circle cx="145" cy="220" r="3"/><circle cx="350" cy="100" r="3"/></g><g fill="#e5a1ff"><circle cx="250" cy="155" r="18"/><circle cx="250" cy="155" r="27" fill="none" stroke="#e5a1ff" stroke-width="1" stroke-opacity=".8"/></g><g fill="#c4d9e8" font-family="monospace" font-size="10"><text x="65" y="65">CUSTOMER</text><text x="197" y="42">DEVICE</text><text x="340" y="78">IP NODE</text><text x="270" y="151">ENTITY</text><text x="25" y="294">COMMUNITY STRUCTURE / ANOMALY REVIEW</text></g></svg><div class="viz-label">RELATIONSHIP GRAPH / INVESTIGATE THE CONNECTIONS</div></div></article>
-<article class="project reveal"><div class="project-meta"><span>02 / E-COMMERCE DATA SCIENCE</span><span>MARKETPLACE</span></div><div class="project-visual"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85" alt="Online shopping payment experience" loading="lazy"><div class="viz-overlay"></div><svg class="viz-svg" viewBox="0 0 500 220" role="img" aria-label="Illustrative cohort retention heatmap"><g transform="translate(28 25)"><g fill="#64e1ed"><rect x="0" y="0" width="50" height="22" rx="3" opacity=".95"/><rect x="58" y="0" width="50" height="22" rx="3" opacity=".7"/><rect x="116" y="0" width="50" height="22" rx="3" opacity=".5"/><rect x="174" y="0" width="50" height="22" rx="3" opacity=".25"/><rect x="0" y="30" width="50" height="22" rx="3" opacity=".8"/><rect x="58" y="30" width="50" height="22" rx="3" opacity=".55"/><rect x="116" y="30" width="50" height="22" rx="3" opacity=".3"/><rect x="0" y="60" width="50" height="22" rx="3" opacity=".95"/><rect x="58" y="60" width="50" height="22" rx="3" opacity=".65"/><rect x="0" y="90" width="50" height="22" rx="3" opacity=".75"/></g><g fill="#c6d9e7" font-family="monospace" font-size="9"><text x="260" y="12">COHORT RETENTION</text><text x="260" y="33">RFM SEGMENTS</text><text x="260" y="54">PURCHASE SURVIVAL</text><text x="260" y="75">SQL ANALYTICS</text><text x="260" y="96">POINT-IN-TIME ML</text></g></g></svg><div class="viz-label">CUSTOMER LIFECYCLE / COHORTS · VALUE · RETENTION</div></div><h3>Brazilian E-Commerce Intelligence</h3><p>SQL-first marketplace analytics on Olist: governed data modeling, executive KPIs, customer RFM, cohort retention, purchase-survival analysis, statistical testing and a leakage-aware second-purchase research model.</p><div class="metric-strip"><span class="metric-chip">16 SQL build stages</span><span class="metric-chip">20+ analytical tables/views</span><span class="metric-chip">7 dashboard pages</span></div><div class="stack">POSTGRESQL · SQL · PYTHON · SCIKIT-LEARN · MLFLOW · STREAMLIT</div><div class="truth"><b>Honest model result:</b> final holdout PR-AUC 0.01048 vs 0.01665 for the lifetime-frequency baseline. The churn model is marked research-only; the stronger portfolio story is the analytics, survival and data-quality workflow.</div><div class="project-links"><a href="https://github.com/Harshithpatali/brazilian-ecommerce-data-science" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://olist-ecommerce-ds.streamlit.app/" target="_blank" rel="noopener">LIVE DASHBOARD ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>03 / CAUSAL SCIENCE</span><span>EXPERIMENTATION</span></div><div class="project-visual"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85" alt="Analytics charts on a digital dashboard" loading="lazy"><div class="viz-overlay"></div><svg class="viz-svg" viewBox="0 0 500 220" role="img" aria-label="Illustrative treatment and control uplift curves"><path d="M38 175 C100 140 140 125 190 95 S290 58 350 45 S420 30 465 20" fill="none" stroke="#64e1ed" stroke-width="3"/><path d="M38 175 C100 162 140 145 190 132 S290 111 350 105 S420 98 465 92" fill="none" stroke="#e5a1ff" stroke-width="2" stroke-dasharray="5 5"/><path d="M38 175H465M38 175V22" stroke="#91a7bb" stroke-opacity=".45"/><g fill="#c5d8e6" font-family="monospace" font-size="10"><text x="45" y="18">INCREMENTAL RESPONSE</text><text x="385" y="205">TARGETED %</text></g><g fill="#64e1ed"><circle cx="190" cy="95" r="5"/><circle cx="350" cy="45" r="5"/></g></svg><div class="viz-label">TREATMENT EFFECTS / UPLIFT → TARGETING POLICY</div></div><h3>Causal Experimentation Intelligence</h3><p>An end-to-end Criteo experiment workflow: sample-ratio checks, covariate balance, power/MDE, A/B testing, ATE, S/T/X learners, uplift ranking and scenario-based campaign economics.</p><div class="metric-strip"><span class="metric-chip">80,000 records</span><span class="metric-chip">ATE +0.13 pp</span><span class="metric-chip">p = 0.0041</span><span class="metric-chip">95% CI excludes 0</span></div><div class="stack">PYTHON · SCIPY · LIGHTGBM · CAUSALML · FASTAPI · STREAMLIT</div><div class="truth"><b>Business scenario:</b> the reported 18.5% ROI at 10% targeting is a scaled estimate under configurable treatment-cost, revenue and margin assumptions—not realised campaign profit.</div><div class="project-links"><a href="https://github.com/Harshithpatali/causal_experimentation_platform" target="_blank" rel="noopener">SOURCE CODE ↗</a></div>
-<article class="project reveal"><div class="project-meta"><span>04 / APPLIED AI</span><span>RAG SYSTEMS</span></div><div class="project-visual"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85" alt="Digital information network visualization" loading="lazy"><div class="viz-overlay"></div><div class="viz-label">ANNUAL REPORTS / RETRIEVAL / EVIDENCE</div></div><h3>Financial Intelligence Agent</h3><p>A source-grounded research assistant that turns financial reports into searchable evidence and retrieval-backed answers, designed to keep responses connected to source material.</p><div class="stack">PYTHON · RAG · EMBEDDINGS · CHROMADB · FASTAPI</div><div class="project-links"><a href="https://github.com/Harshithpatali/financial-intelligence-agent" target="_blank" rel="noopener">SOURCE CODE ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>05 / MODEL OBSERVABILITY</span><span>LLM EVALUATION</span></div><div class="project-visual"><svg class="viz-svg" viewBox="0 0 500 220" role="img" aria-label="Illustrative model monitoring chart"><path d="M35 170 110 140 175 152 245 88 310 105 375 52 465 35" fill="none" stroke="#64e1ed" stroke-width="3"/><path d="M35 120 110 112 175 115 245 109 310 111 375 107 465 108" fill="none" stroke="#e5a1ff" stroke-width="2" stroke-dasharray="6 6"/><path d="M35 180H465M35 25V180" stroke="#91a7bb" stroke-opacity=".35"/><g fill="#c5d8e6" font-family="monospace" font-size="10"><text x="45" y="18">EVALUATION + DRIFT MONITORING</text><text x="355" y="200">TIME →</text></g></svg><div class="viz-label">ASYNC EVALUATION / DISTRIBUTION DRIFT</div></div><h3>LLM Evaluation Platform</h3><p>An asynchronous evaluation and observability workflow with job orchestration, statistical distribution-shift diagnostics and a monitoring dashboard for repeatable model assessment.</p><div class="stack">FASTAPI · CELERY · REDIS · KS TEST · WASSERSTEIN</div><div class="project-links"><a href="https://github.com/Harshithpatali/llm-evaluation-platform" target="_blank" rel="noopener">SOURCE CODE ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>06 / QUANTITATIVE RESEARCH</span><span>TIME SERIES</span></div><div class="project-visual"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=85" alt="Financial market chart on a screen" loading="lazy"><div class="viz-overlay"></div><div class="viz-label">TIME SERIES / CHRONOLOGICAL VALIDATION / CI</div></div><h3>Sensex Quant Lab</h3><p>A market-forecasting research workflow with time-aware validation, model comparison, API and dashboard delivery, plus automated GitHub Actions workflows.</p><div class="stack">PYTHON · TIME SERIES · SCIKIT-LEARN · FASTAPI · STREAMLIT · CI/CD</div><div class="truth"><b>Research discipline:</b> historical backtests are exploratory evidence, not a promise of future returns.</div><div class="project-links"><a href="https://github.com/Harshithpatali/Sensex_Quant_Lab" target="_blank" rel="noopener">SOURCE CODE ↗</a></div></article>
 
-<article class="project reveal"><div class="project-meta"><span>07 / OPERATIONS RESEARCH</span><span>RETAIL ANALYTICS</span></div><h3>Retail Demand & Inventory Optimization</h3><p>Forecasts demand across a deterministic M5 retail panel and connects the forecast to inventory decisions. The workflow evaluates service levels, stockout exposure and holding costs instead of optimizing forecast error in isolation.</p><div class="metric-strip"><span class="metric-chip">388,200 feature rows</span><span class="metric-chip">200 series</span><span class="metric-chip">Cost-aware policy evaluation</span></div><div class="stack">PYTHON · M5 · TIME-SERIES · LIGHTGBM · FASTAPI · STREAMLIT</div><div class="project-links"><a href="https://github.com/Harshithpatali/retail-demand-inventory-optimization" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://retail-demand-inventory-optimization-v1.streamlit.app/" target="_blank" rel="noopener">LIVE DASHBOARD ↗</a><a href="https://retail-demand-inventory-optimization.onrender.com/" target="_blank" rel="noopener">API ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>08 / DATA ENGINEERING + ML</span><span>END-TO-END SYSTEM</span></div><h3>Enterprise ML Platform</h3><p>Customer churn pipeline spanning Hadoop HDFS, PySpark Bronze/Silver/Gold processing, temporal feature construction, model training, SHAP explainability, FastAPI inference and a Streamlit dashboard. Includes automated tests and a written audit of class imbalance and baseline limitations.</p><div class="metric-strip"><span class="metric-chip">16 automated tests</span><span class="metric-chip">19 temporal features</span><span class="metric-chip">5 dashboard pages</span></div><div class="stack">PYTHON · HADOOP · PYSPARK · XGBOOST · SHAP · FASTAPI</div><div class="project-links"><a href="https://github.com/Harshithpatali/enterprise-ml-platform" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://enterprise-ml-platform.onrender.com/docs" target="_blank" rel="noopener">API DOCS ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>09 / WAVELET FORENSICS</span><span>RESEARCH PROJECT</span></div><h3>DeepFake Noise & Wavelet Forensics</h3><p>Investigates whether spatial noise statistics and multi-scale wavelet-domain features can distinguish authentic from synthetic face images. Uses a compact, interpretable feature-engineering pipeline rather than relying on an end-to-end CNN.</p><div class="metric-strip"><span class="metric-chip">105-dimensional feature vector</span><span class="metric-chip">Wavelet + noise features</span><span class="metric-chip">Interpretable ML</span></div><div class="stack">PYTHON · PYWAVELETS · IMAGE FORENSICS · SCIKIT-LEARN</div><div class="project-links"><a href="https://github.com/Harshithpatali/deepfake-noise-wavelet-ml" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://deepfake-noise-wavelet-ml-hd.streamlit.app/" target="_blank" rel="noopener">LIVE APP ↗</a><a href="https://deepfake-noise-wavelet-ml.onrender.com/" target="_blank" rel="noopener">API ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>10 / LLM EVALUATION</span><span>BENCHMARKING</span></div><h3>LLM Prompt Evaluation Framework</h3><p>Compares prompt strategies and model providers for structured attribute extraction from noisy product text. Evaluates output quality alongside operational criteria such as JSON validity, latency, token cost and hallucination rate.</p><div class="stack">PYTHON · FASTAPI · STREAMLIT · LLM PROVIDERS · EVALUATION</div><div class="project-links"><a href="https://github.com/Harshithpatali/llm-prompt-benchmark" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://llm-prompt-benchmark-a.streamlit.app/" target="_blank" rel="noopener">LIVE DEMO ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>11 / GENERATIVE AI QUALITY</span><span>LLM-AS-A-JUDGE</span></div><h3>LLM-as-a-Judge for E-commerce</h3><p>Builds a rubric-driven evaluation workflow for generated product content, assessing faithfulness to source data, completeness, clarity and format compliance rather than relying only on surface text similarity.</p><div class="stack">PYTHON · LLM EVALUATION · E-COMMERCE · RUBRIC DESIGN</div><div class="project-links"><a href="https://github.com/Harshithpatali/llm-judge-ecommerce" target="_blank" rel="noopener">SOURCE CODE ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>12 / STATISTICAL EXPERIMENTS</span><span>BAYESIAN METHODS</span></div><h3>Bayesian & Sequential Experimentation</h3><p>A teaching and research platform for controlled experiments, combining frequentist confidence intervals, Beta-Binomial Bayesian analysis, sequential testing and multiple-testing corrections on synthetic data with known ground truth.</p><div class="stack">PYTHON · SCIPY · BAYESIAN INFERENCE · A/B TESTING</div><div class="project-links"><a href="https://github.com/Harshithpatali/bayesian-sequential-experimentation" target="_blank" rel="noopener">SOURCE CODE ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>13 / KNOWLEDGE SYSTEMS</span><span>RETRIEVAL-AUGMENTED GENERATION</span></div><h3>Math RAG Assistant</h3><p>A textbook-grounded complex-analysis tutor with document ingestion, retrieval and answer generation. The project explores how retrieval and evaluation can support technical explanations that remain anchored to source material.</p><div class="stack">PYTHON · RAG · EMBEDDINGS · FASTAPI · STREAMLIT</div><div class="project-links"><a href="https://github.com/Harshithpatali/rag-math-assistant" target="_blank" rel="noopener">SOURCE CODE ↗</a></div></article>
-<article class="project reveal"><div class="project-meta"><span>14 / AUDIO SYSTEMS</span><span>WAVELET SIGNAL PROCESSING</span></div><h3>WaveTrace — Wavelet-Domain Voice Communication</h3><p>Explores wavelet-domain signal processing for robust voice communication and forensic fingerprinting concepts, connecting signal decomposition with practical audio transmission and integrity questions.</p><div class="stack">PYTHON · PYWAVELETS · AUDIO SIGNAL PROCESSING · STREAMLIT</div><div class="project-links"><a href="https://github.com/Harshithpatali/Wavelet-Domain-Robust-Voice-Communication-Lab" target="_blank" rel="noopener">SOURCE CODE ↗</a><a href="https://wavelet-domain-robust-voice-communication-lab.streamlit.app/" target="_blank" rel="noopener">LIVE APP ↗</a></div></article>
-</div></div></section>
-<section id="research" class="section-alt"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">RESEARCH INTEREST</div><h2>Wavelets meet attention.</h2></div><p>An emerging direction I want to investigate: bringing multi-resolution signal analysis into Transformer attention, with careful experiments rather than assuming a performance gain.</p></div><div class="research-copy"><p><strong>Wavelet-based attention mechanisms for Transformers</strong></p><p>I am interested in exploring how discrete wavelet transforms and multi-scale representations could inform attention: separating coarse context from high-frequency detail, allocating attention across scales, and studying whether this helps with long sequences or structured signals.</p><ul><li>Multi-resolution token or feature representations using wavelet decomposition.</li><li>Scale-aware attention that can combine local detail with broader context.</li><li>Efficiency, stability and accuracy comparisons against standard attention baselines.</li><li>Applications to time series, audio and other structured data.</li></ul><p class="research-note">This is a research interest and experimental direction—not a claim of a completed or benchmark-validated Transformer architecture.</p></div></div></section>
-<section id="evidence"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">02 / NUMBERS WITH CONTEXT</div><h2>Evidence, not decoration.</h2></div><p>Metrics are shown with their evaluation context. A baseline that beats a model is a finding worth reporting—not something to hide.</p></div><div class="chart-panel">
-<div class="chart-card reveal"><h3>Causal experiment · conversion rate</h3><p>Balanced 40K control / 40K treatment sample from the Criteo benchmark.</p><div class="bar-row"><span>Control</span><div class="bar"><i style="--w:72.8%"></i></div><b>0.3475%</b></div><div class="bar-row"><span>Treatment</span><div class="bar"><i style="--w:100%"></i></div><b>0.4775%</b></div><div class="chart-note">Absolute lift: +0.13 percentage points · two-proportion z-test p = 0.0041 · 95% CI: +0.041 to +0.219 pp.</div></div>
-<div class="chart-card reveal"><h3>Olist · final holdout PR-AUC</h3><p>Second delivered purchase within 90 days · chronological holdout.</p><div class="bar-row"><span>Churn model</span><div class="bar"><i style="--w:63%"></i></div><b>0.01048</b></div><div class="bar-row"><span>Frequency baseline</span><div class="bar"><i style="--w:100%"></i></div><b>0.01665</b></div><div class="chart-note">The model did not beat the simple lifetime-frequency baseline. It remains research-only; no production-performance claim is made.</div></div>
-</div></div></section>
-<section id="method" class="section-alt"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">03 / HOW I WORK</div><h2>Trust the data. Then the model.</h2></div><p>My workflow is designed to make analysis reproducible, model behaviour explainable and business recommendations measurable.</p></div><div class="process">
-<article class="reveal"><span>01 / DEFINE</span><h3>Frame the decision</h3><p>Outcome, grain, intervention and business metric.</p></article><article class="reveal"><span>02 / PROFILE</span><h3>Audit the data</h3><p>Quality, leakage, missingness and point-in-time validity.</p></article><article class="reveal"><span>03 / BASELINE</span><h3>Start simple</h3><p>Statistical baselines before complex models.</p></article><article class="reveal"><span>04 / VALIDATE</span><h3>Test rigorously</h3><p>Temporal splits, holdouts, uncertainty and diagnostics.</p></article><article class="reveal"><span>05 / EXPLAIN</span><h3>Show the why</h3><p>SHAP, confidence intervals and treatment effects.</p></article><article class="reveal"><span>06 / SHIP</span><h3>Make it useful</h3><p>APIs, dashboards, automation and documentation.</p></article>
-</div></div></section>
-<section id="skills"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">04 / TECHNICAL TOOLKIT</div><h2>Tools I put to work.</h2></div><p>A practical stack spanning analysis, statistical learning, applied AI and production delivery.</p></div><div class="skills">
-<div class="skill reveal"><div class="icon">⌘</div><h3>Data & Engineering</h3><p>Python · SQL · PostgreSQL<br>Pandas · NumPy · SciPy<br>PySpark · Hadoop · Git</p></div>
-<div class="skill reveal"><div class="icon">∑</div><h3>Statistics & ML</h3><p>scikit-learn · XGBoost · LightGBM<br>Statsmodels · MLflow · SHAP<br>A/B Testing · Causal Inference</p></div>
-<div class="skill reveal"><div class="icon">✳</div><h3>Applied AI</h3><p>RAG · LangChain · FAISS<br>Embeddings · ChromaDB<br>LLM Evaluation · Transformers</p></div>
-<div class="skill reveal"><div class="icon">↗</div><h3>Production</h3><p>FastAPI · Streamlit · Docker<br>GitHub Actions · Render · GCP<br>Redis · Celery · Supabase</p></div>
-</div></div></section>
-<section id="about" class="section-alt"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">05 / BACKGROUND</div><h2>Maths to machine learning.</h2></div><p>Applied mathematics gives me a strong base for statistical reasoning, optimization and quantitative problem-solving. I enjoy taking that foundation into practical data products.</p></div><div class="timeline">
-<div class="timeline-item reveal"><time>PROFESSIONAL EXPERIENCE</time><div><h3>Data / AI Engineering Work</h3><h4>Innodata</h4><p>AI-driven data analysis, statistical evaluation, SQL workflows, feature engineering and machine-learning optimization pipelines.</p></div></div>
-<div class="timeline-item reveal"><time>EDUCATION</time><div><h3>M.Sc. Applied Mathematics & Computing</h3><h4>Manipal Academy of Higher Education</h4><p>Mathematical and computational foundation in statistical modeling, machine learning, optimization and quantitative analysis.</p></div></div>
-<div class="timeline-item reveal"><time>TEACHING</time><div><h3>Assistant Lecturer</h3><h4>Undergraduate Mathematics</h4><p>Taught Commercial Arithmetic and Linear Optimization, translating quantitative concepts into structured problem-solving lessons.</p></div></div>
-<div class="timeline-item reveal"><time>CERTIFICATIONS</time><div><h3>Professional learning</h3><h4>IBM · University of Michigan · DeepLearning.AI</h4><p>IBM Machine Learning · IBM Data Science Professional Certificate · University of Michigan Machine Learning · Deep Learning Specialization.</p></div></div>
-</div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="contact-box reveal"><div class="kicker">06 / CONTACT</div><h2>Let's turn a hard<br><span class="gradient">question into a product.</span></h2><p>I'm open to Data Science, Data Analytics, Machine Learning and Applied AI opportunities where rigorous thinking meets real-world delivery.</p><div class="contact-actions"><a class="btn primary" href="mailto:harshikollur302@gmail.com">EMAIL ME ↗</a><a class="btn ghost" href="https://www.linkedin.com/in/harshith-devaraja-087ba0228" target="_blank" rel="noopener">LINKEDIN ↗</a><a class="btn ghost" href="https://github.com/Harshithpatali" target="_blank" rel="noopener">GITHUB ↗</a></div><div class="social"><a href="mailto:harshikollur302@gmail.com" aria-label="Email">✉</a><a href="https://www.linkedin.com/in/harshith-devaraja-087ba0228" aria-label="LinkedIn" target="_blank" rel="noopener">in</a><a href="https://github.com/Harshithpatali" aria-label="GitHub" target="_blank" rel="noopener">GH</a></div></div></div></section>
+<section id="featured" class="featured">
+ <div class="wrap">
+  <div class="section-heading">
+   <div><div class="eyebrow">01 / Selected work</div><h2>Three projects, examined closely.</h2></div>
+   <p>These are the projects that best show how I approach data problems: understand the product question, build a defensible analysis, measure against a baseline and explain the limits.</p>
+  </div>
+  <div class="feature-grid">
+   <article class="feature">
+    <div>
+     <div class="feature-label">01 · Customer intelligence / graph analytics</div>
+     <h3>Customer Intelligence &amp; Graph Anomaly Lab</h3>
+     <p>A customer investigation workspace that connects behaviour profiles, segmentation, anomaly ranking and shared-entity networks. The goal is not to label someone as fraudulent; it is to help an analyst understand unusual behaviour and inspect the surrounding context.</p>
+     <div class="feature-metrics">
+      <div><strong>50K</strong><span>Transaction graph cap</span></div>
+      <div><strong>60 / 40</strong><span>IF / LOF score blend</span></div>
+      <div><strong>3</strong><span>Entity types: user, device, IP</span></div>
+     </div>
+     <div class="caveat"><b>Interpretation:</b> the historical fraud class is excluded from the current unsupervised workflow. Anomaly ranks are cohort-relative review signals—not calibrated fraud probabilities.</div>
+     <div class="feature-links"><a href="https://github.com/Harshithpatali/Graph-anomaly-supervised-neural-prediction" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://graph-anomaly-supervised-neural-prediction-v1.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
+    </div>
+    <div class="feature-art">
+     <svg viewBox="0 0 480 280" role="img" aria-label="Illustrative user device and IP graph showing shared entities">
+      <g stroke="#8ca08b" stroke-width="1.4" fill="none"><path d="M65 75 L185 42 L318 86 L410 177 L292 230 L128 203 L65 75 M185 42 L292 230 M65 75 L128 203 M318 86 L128 203 M410 177 L185 42 M318 86 L292 230 M185 42 L318 86"/></g>
+      <g fill="#315a43"><circle cx="65" cy="75" r="8"/><circle cx="185" cy="42" r="7"/><circle cx="318" cy="86" r="9"/><circle cx="410" cy="177" r="7"/><circle cx="292" cy="230" r="8"/><circle cx="128" cy="203" r="7"/></g>
+      <g fill="#a95e45"><circle cx="240" cy="137" r="14"/><circle cx="240" cy="137" r="23" fill="none" stroke="#a95e45" stroke-width="1.3"/></g>
+      <g fill="#68766a" font-family="DM Mono,monospace" font-size="10"><text x="28" y="57">USER</text><text x="160" y="23">DEVICE</text><text x="321" y="65">IP NODE</text><text x="254" y="132">SHARED</text><text x="255" y="144">ENTITY</text><text x="22" y="265">RELATIONSHIPS ARE CONTEXT, NOT PROOF</text></g>
+     </svg>
+    </div>
+   </article>
+   <article class="feature">
+    <div class="feature-label">02 · SQL / customer analytics</div>
+    <h3>Brazilian E-commerce Intelligence</h3>
+    <p>A SQL-first analytics product over Olist, with careful table grain, reusable analytical models, customer segmentation, cohorts, purchase survival and a 7-page dashboard.</p>
+    <div class="feature-metrics"><div><strong>16</strong><span>SQL build stages</span></div><div><strong>20+</strong><span>Tables &amp; views</span></div><div><strong>57</strong><span>Point-in-time features</span></div></div>
+    <div class="caveat"><b>Model result:</b> holdout PR-AUC 0.01048 vs 0.01665 for the lifetime-frequency baseline. The churn model remains research-only; the stronger story is the data and customer analytics layer.</div>
+    <div class="feature-links"><a href="https://github.com/Harshithpatali/brazilian-ecommerce-data-science" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://olist-ecommerce-ds.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
+    <details><summary>What the project demonstrates</summary><p class="detail-text">Order-grain modelling avoids multiplying item and payment rows. Customer identity uses the stable customer_unique_id. The platform includes RFM segments, cohort retention, Kaplan–Meier time-to-second-purchase analysis, statistical testing and an assumption-led campaign simulator.</p></details>
+   </article>
+   <article class="feature">
+    <div class="feature-label">03 · Causal inference / experimentation</div>
+    <h3>Causal Experimentation Intelligence</h3>
+    <p>An experiment workflow that validates allocation and covariate balance before estimating lift, then studies heterogeneous treatment effects and targeting policies.</p>
+    <div class="feature-metrics"><div><strong>80K</strong><span>Criteo sample rows</span></div><div><strong>+0.13 pp</strong><span>Observed conversion lift</span></div><div><strong>0.0041</strong><span>Two-proportion p-value</span></div></div>
+    <div class="caveat"><b>Context:</b> the shipped sample is balanced 50/50 although the original benchmark design is approximately 85% treated. The ROI output is a scenario projection under explicit cost and margin assumptions—not realised campaign profit.</div>
+    <div class="feature-links"><a href="https://github.com/Harshithpatali/causal_experimentation_platform" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://causal-ai-customer-growth-intelligence.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
+    <details><summary>Evaluation details</summary><p class="detail-text">The sample contains 40K treatment and 40K control records. The conversion difference is 0.4775% vs 0.3475%, with 95% CI +0.041 to +0.219 percentage points. The workflow surfaces sample-ratio mismatch, standardised mean differences, power/MDE, ATE/ATT and S-, T- and X-learner estimates.</p></details>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="wrap">
+  <div class="section-heading">
+   <div><div class="eyebrow">02 / Project index</div><h2>More things I’ve built.</h2></div>
+   <p>A broader collection across forecasting, data engineering, statistics, signal processing and applied AI. Filter by area, then follow the repository for implementation details and reproducible methods.</p>
+  </div>
+  <div class="library-head">
+   <div class="filters" role="group" aria-label="Filter projects">
+    <button class="filter" data-filter="all" aria-pressed="true">All work</button>
+    <button class="filter" data-filter="data" aria-pressed="false">Data &amp; ML</button>
+    <button class="filter" data-filter="ai" aria-pressed="false">Applied AI</button>
+    <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+   </div>
+   <div class="project-count" id="projectCount" aria-live="polite">11 projects</div>
+  </div>
+  <div class="project-grid" id="projectGrid">
+<article class="project-card" data-category="data">
+ <div class="project-top"><span class="project-number">04</span><span class="project-category">Forecasting & optimisation</span></div>
+ <h3>Retail Demand & Inventory Optimisation</h3><p class="project-description">A forecasting pipeline that connects demand estimates to a periodic-review inventory policy. It compares statistical baselines, calibrates uncertainty from out-of-sample residuals, then simulates holding, ordering and stockout costs.</p>
+ <div class="project-evidence"><span>200 item–store series · 388,200 feature rows</span></div>
+ <p class="project-impact">On the held-out period, the selected policy reduced simulated total cost by 16.21% and increased service level by 2.46 percentage points. The economics use documented demonstration assumptions, not retailer-calibrated costs.</p>
+ <div class="project-bottom"><span class="project-stack">Python · XGBoost · LightGBM · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/retail-demand-inventory-optimization" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://retail-demand-inventory-optimization-v1.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://retail-demand-inventory-optimization.onrender.com/" target="_blank" rel="noopener noreferrer">API ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="data">
+ <div class="project-top"><span class="project-number">05</span><span class="project-category">Data engineering & ML</span></div>
+ <h3>Enterprise ML Platform</h3><p class="project-description">An Olist customer pipeline built with Hadoop HDFS and PySpark medallion layers, temporal feature generation, model comparison, SHAP explanations, a FastAPI prediction service and Streamlit operations dashboard.</p>
+ <div class="project-evidence"><span>180-day lookback · 90-day horizon · 19 temporal features · 16 tests</span></div>
+ <p class="project-impact">The repository documents a heavily imbalanced target population and the limits of headline classification metrics. I treat this as a data-engineering, reproducibility and serving project—not evidence of a production-ready churn model.</p>
+ <div class="project-bottom"><span class="project-stack">Python · Hadoop · PySpark · XGBoost · SHAP · FastAPI</span><div class="project-links"><a href="https://github.com/Harshithpatali/enterprise-ml-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://enterprise-ml-platform.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="research">
+ <div class="project-top"><span class="project-number">06</span><span class="project-category">Signal processing & forensics</span></div>
+ <h3>DeepFake Noise & Wavelet Forensics</h3><p class="project-description">An interpretable image-forensics study testing whether spatial noise statistics and multi-scale wavelet coefficients can distinguish real from synthetic face images without an end-to-end CNN.</p>
+ <div class="project-evidence"><span>304,154 images · 105 engineered features</span></div>
+ <p class="project-impact">Validation ROC-AUC 0.9249, PR-AUC 0.9124 and accuracy 0.9086. These are validation-set results; the repo keeps a separate test split. Wavelet/noise features provide a small measured gain over spatial features alone on this dataset.</p>
+ <div class="project-bottom"><span class="project-stack">Python · PyWavelets · scikit-learn · Logistic Regression</span><div class="project-links"><a href="https://github.com/Harshithpatali/deepfake-noise-wavelet-ml" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://deepfake-noise-wavelet-ml-hd.streamlit.app/" target="_blank" rel="noopener noreferrer">Live app ↗</a><a href="https://deepfake-noise-wavelet-ml.onrender.com/" target="_blank" rel="noopener noreferrer">API ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="ai">
+ <div class="project-top"><span class="project-number">07</span><span class="project-category">LLM evaluation</span></div>
+ <h3>LLM Prompt Evaluation & Benchmarking</h3><p class="project-description">A reusable evaluation harness for structured attribute extraction from noisy product text. Prompt strategies and model providers are modular; runs are compared on extraction quality and operational cost, not anecdotal prompt preference.</p>
+ <div class="project-evidence"><span>ABO product data · 4 implemented prompt strategies</span></div>
+ <p class="project-impact">Implemented strategies include zero-shot, few-shot, chain-of-thought and structured JSON. Role-based and self-consistency variants are documented as planned rather than shipped.</p>
+ <div class="project-bottom"><span class="project-stack">Python · FastAPI · Streamlit · LLM APIs · Pydantic</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-prompt-benchmark" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-prompt-benchmark-a.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="ai">
+ <div class="project-top"><span class="project-number">08</span><span class="project-category">AI reliability</span></div>
+ <h3>LLM Reliability & Evaluation Platform</h3><p class="project-description">An asynchronous quality-monitoring architecture that separates inference from background evaluation, persists telemetry and compares historical and recent score distributions.</p>
+ <div class="project-evidence"><span>KS test · Wasserstein distance · asynchronous workers</span></div>
+ <p class="project-impact">The platform demonstrates the mechanics of telemetry collection, background scoring and statistical drift diagnostics. The dashboard and API are deployed as separate services.</p>
+ <div class="project-bottom"><span class="project-stack">FastAPI · Celery · Redis · SciPy · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-evaluation-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-evaluation-platform-q.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://llm-evaluation-platform-1.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="ai">
+ <div class="project-top"><span class="project-number">09</span><span class="project-category">LLM evaluation</span></div>
+ <h3>LLM-as-a-Judge for E-commerce</h3><p class="project-description">A rubric-based evaluator for generated product titles, descriptions and attributes. The judge compares generated content with source product information across accuracy, completeness, clarity, persuasiveness and format compliance.</p>
+ <div class="project-evidence"><span>5 evaluation dimensions · single and batch workflows</span></div>
+ <p class="project-impact">Focuses on why text-similarity metrics alone are insufficient for assessing factuality and usefulness. Supports review of scores, criterion-level reasoning and batch quality patterns.</p>
+ <div class="project-bottom"><span class="project-stack">Python · FastAPI · Streamlit · Multi-provider LLMs</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-judge-ecommerce" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-judge-ecommerce-c.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://llm-judge-ecommerce.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="data">
+ <div class="project-top"><span class="project-number">10</span><span class="project-category">Statistics & experimentation</span></div>
+ <h3>Bayesian & Sequential Experimentation</h3><p class="project-description">A research-oriented experiment lab using synthetic data with known ground truth to study power, frequentist and Bayesian A/B tests, sequential looks and multiple comparisons.</p>
+ <div class="project-evidence"><span>Bayesian credible intervals · always-valid p-values · FDR</span></div>
+ <p class="project-impact">Synthetic experiments make it possible to inspect Type I error, power and calibration under optional stopping—questions that are difficult to answer from a single real-world A/B dataset.</p>
+ <div class="project-bottom"><span class="project-stack">Python · SciPy · Beta-Binomial · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/bayesian-sequential-experimentation" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="ai">
+ <div class="project-top"><span class="project-number">11</span><span class="project-category">Applied AI & retrieval</span></div>
+ <h3>TCS Financial Intelligence Agent</h3><p class="project-description">A report-grounded financial research assistant that parses annual reports, creates BGE embeddings, stores vectors in ChromaDB and generates retrieval-backed answers through a FastAPI service.</p>
+ <div class="project-evidence"><span>Annual-report ingestion · semantic search · cited context</span></div>
+ <p class="project-impact">The product connects long-form corporate disclosures to natural-language questions and executive summaries. Answers are designed to be grounded in retrieved source passages.</p>
+ <div class="project-bottom"><span class="project-stack">Python · BGE Embeddings · ChromaDB · FastAPI · Groq</span><div class="project-links"><a href="https://github.com/Harshithpatali/financial-intelligence-agent" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://financial-intelligence-agent-g.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="research">
+ <div class="project-top"><span class="project-number">12</span><span class="project-category">Quantitative research</span></div>
+ <h3>Sensex Quant Lab</h3><p class="project-description">A next-session Open/Close forecasting workflow with shared feature code, model search, TimeSeriesSplit validation, a FastAPI prediction layer and a Streamlit quantitative dashboard.</p>
+ <div class="project-evidence"><span>Dual-target forecasts · scheduled weekday retraining · model leaderboard</span></div>
+ <p class="project-impact">The workflow uses chronological evaluation and treats outputs as statistical research—not trading recommendations or evidence of profitable returns.</p>
+ <div class="project-bottom"><span class="project-stack">Python · TimeSeriesSplit · scikit-learn · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/Sensex_Quant_Lab" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="ai">
+ <div class="project-top"><span class="project-number">13</span><span class="project-category">Applied AI & retrieval</span></div>
+ <h3>Math RAG Assistant</h3><p class="project-description">A complex-analysis learning assistant built around textbook ingestion, retrieval-augmented generation and an evaluation layer for technical explanations.</p>
+ <div class="project-evidence"><span>Document ingestion · retrieval pipeline · LLM-as-a-Judge evaluation</span></div>
+ <p class="project-impact">Explores how external mathematical references can support more grounded tutoring than unconstrained generation alone.</p>
+ <div class="project-bottom"><span class="project-stack">Python · RAG · Embeddings · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/rag-math-assistant" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+</article>
+
+<article class="project-card" data-category="research">
+ <div class="project-top"><span class="project-number">14</span><span class="project-category">Wavelet signal processing</span></div>
+ <h3>Wavelet Voice Lab</h3><p class="project-description">A wavelet-domain voice communication simulator: DWT decomposition, thresholding, keyed coefficient permutation, noisy-channel simulation and receiver-side reconstruction.</p>
+ <div class="project-evidence"><span>AWGN and packet-loss experiments · WAV transmission · reversible transform</span></div>
+ <p class="project-impact">An academic prototype for studying signal representation and robustness. The repository explicitly states that keyed scrambling is not cryptography; security claims are not made.</p>
+ <div class="project-bottom"><span class="project-stack">Python · PyWavelets · NumPy · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/Wavelet-Domain-Robust-Voice-Communication-Lab" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://wavelet-domain-robust-voice-communication-lab.streamlit.app/" target="_blank" rel="noopener noreferrer">Live app ↗</a></div></div>
+</article></div>
+ </div>
+</section>
+
+<section id="research" class="research">
+ <div class="wrap">
+  <div class="section-heading">
+   <div><div class="eyebrow">03 / Research interest</div><h2>Wavelets × attention.</h2></div>
+   <p>A direction I want to investigate at the intersection of signal processing, representation learning and Transformer architectures.</p>
+  </div>
+  <div class="research-grid">
+   <div class="research-copy">
+    <div class="section-index">CURRENT QUESTION / NOT A COMPLETED METHOD</div>
+    <h3>Can multi-resolution structure make attention more selective?</h3>
+    <p>I’m interested in wavelet-based attention mechanisms for Transformers: using wavelet decompositions to separate coarse structure from fine-scale detail, then studying how attention should combine information across those scales.</p>
+    <p>The idea connects naturally to time series and audio, where useful patterns can appear at different temporal resolutions. I want to test whether scale-aware representations improve efficiency or robustness without sacrificing important local information.</p>
+    <div class="question"><b>Research guardrail</b>This is an exploratory interest, not a claim that I have already developed or benchmarked a new attention architecture.</div>
+   </div>
+   <div class="research-visual">
+    <p>Concept sketch / multi-resolution sequence</p>
+    <svg viewBox="0 0 500 245" role="img" aria-label="Conceptual wavelet decomposition into coarse approximation and detail coefficients">
+     <g stroke="#aebfa9" fill="none" stroke-width="1"><path d="M20 72 C45 10 65 130 95 72 S145 15 175 72 S220 130 250 72 S300 10 330 72 S380 130 410 72 S455 15 480 72"/><path d="M20 130 H480 M20 195 H480" stroke-dasharray="3 5" opacity=".5"/></g>
+     <path d="M20 72 C45 10 65 130 95 72 S145 15 175 72 S220 130 250 72 S300 10 330 72 S380 130 410 72 S455 15 480 72" fill="none" stroke="#d9b477" stroke-width="2.2"/>
+     <path d="M20 132 C55 115 80 142 115 132 S170 118 205 132 S260 147 295 132 S350 117 385 132 S440 145 480 132" fill="none" stroke="#b8caa9" stroke-width="2"/>
+     <path d="M20 197 L55 184 L90 205 L125 184 L160 202 L195 188 L230 207 L265 183 L300 203 L335 186 L370 205 L405 183 L440 199 L480 188" fill="none" stroke="#d9b477" stroke-width="1.7"/>
+     <g fill="#e7ede3" font-family="DM Mono,monospace" font-size="10"><text x="23" y="18">INPUT SIGNAL</text><text x="23" y="119">COARSE APPROXIMATION</text><text x="23" y="181">DETAIL COEFFICIENTS</text></g>
+     <g fill="#b9c8b4" font-family="DM Mono,monospace" font-size="9"><text x="478" y="235" text-anchor="end">CONCEPTUAL ONLY · NOT TO SCALE</text></g>
+    </svg>
+    <div class="research-note">Questions: How should scale-specific tokens interact? Can attention be restricted to meaningful bands? What is the compute/accuracy trade-off against standard attention?</div>
+   </div>
+  </div>
+  <div class="research-questions">
+   <div class="question"><b>01 / Representation</b>DWT or wavelet-packet features as multi-scale sequence tokens.</div>
+   <div class="question"><b>02 / Attention</b>Cross-scale attention between coarse context and local detail.</div>
+   <div class="question"><b>03 / Evaluation</b>Compare latency, memory, accuracy and robustness with standard baselines.</div>
+   <div class="question"><b>04 / Domains</b>Time series and audio first; only then consider broader sequence tasks.</div>
+  </div>
+ </div>
+</section>
+
+<section id="approach">
+ <div class="wrap">
+  <div class="section-heading">
+   <div><div class="eyebrow">04 / Working principles</div><h2>How I approach a problem.</h2></div>
+   <p>I try to make technical work easier to trust: define the decision, understand the data, establish a baseline and keep the evaluation separate from the story I want the model to tell.</p>
+  </div>
+  <div class="method-grid">
+   <article class="method"><div class="num">01 / FRAME</div><h3>Start with the decision</h3><p>Define the unit of analysis, target, time horizon and action the result should inform.</p></article>
+   <article class="method"><div class="num">02 / UNDERSTAND</div><h3>Respect the data</h3><p>Check grain, missingness, leakage, sampling and the process that created the observations.</p></article>
+   <article class="method"><div class="num">03 / COMPARE</div><h3>Earn model complexity</h3><p>Build simple baselines and use time-aware or held-out evaluation where the problem requires it.</p></article>
+   <article class="method"><div class="num">04 / COMMUNICATE</div><h3>Explain the limits</h3><p>Separate measured outcomes from assumptions, projections and ideas that still need testing.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="skills" class="skills">
+ <div class="wrap">
+  <div class="section-heading">
+   <div><div class="eyebrow">05 / Toolkit</div><h2>Tools I work with.</h2></div>
+   <p>A practical stack across analytics, statistical learning, signal processing, LLM systems and deployment. The method matters more than the logo collection.</p>
+  </div>
+  <div class="skill-grid">
+   <div class="skill"><h3>Programming &amp; data</h3><p>Python · SQL · PostgreSQL · Pandas · NumPy · SciPy · MATLAB · PySpark · Hadoop</p></div>
+   <div class="skill"><h3>Statistics &amp; ML</h3><p>scikit-learn · XGBoost · LightGBM · SHAP · MLflow · Hypothesis testing · Causal inference · Uplift modelling</p></div>
+   <div class="skill"><h3>Applied AI &amp; signals</h3><p>RAG · Embeddings · LangChain · Transformers · LLM evaluation · PyWavelets · Audio/image feature analysis</p></div>
+   <div class="skill"><h3>Product &amp; delivery</h3><p>FastAPI · Streamlit · Docker · GitHub Actions · Render · GCP · Redis · Celery</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap">
+  <div class="section-heading">
+   <div><div class="eyebrow">06 / Background</div><h2>Mathematics to applied data work.</h2></div>
+   <p>My academic training in applied mathematics shapes how I think about inference, optimisation and uncertainty. I enjoy explaining technical ideas as much as building the systems behind them.</p>
+  </div>
+  <div class="timeline">
+   <div class="timeline-row"><time>Nov 2025 — Feb 2026</time><div><h3>AI Evaluation Engineer (Contract) · Innodata Inc.</h3><p>Built Python-based evaluation workflows for dataset preparation, repeated testing, benchmarking and analysis of model behaviour. Designed structured criteria and reproducible test cases for consistency, security, redundancy and output quality across AI and agentic workflows.</p></div></div>
+   <div class="timeline-row"><time>Jan 2025 — Mar 2025</time><div><h3>Lecturer Intern · Dandeli College</h3><p>Taught Applied Optimization, Probability and Statistical Inference, translating mathematical models into structured problem-solving exercises for undergraduate students.</p></div></div>
+   <div class="timeline-row"><time>2022 — 2024</time><div><h3>M.Sc. Applied Mathematics &amp; Computing · Manipal Academy of Higher Education</h3><p>Relevant foundations: Optimization, Statistical Inference, Probability Theory, Machine Learning and Linear Algebra.</p></div></div>
+   <div class="timeline-row"><time>2018 — 2021</time><div><h3>B.Sc. Mathematics, Physics &amp; Computer Science · Mangalore University</h3><p>Undergraduate training across mathematical and computational disciplines.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="contact-panel">
+   <div><div class="eyebrow">07 / Contact</div><h2>Let’s work on a question that matters.</h2><p>I’m open to Data Science, Data Analytics, Applied Machine Learning and AI opportunities where careful analysis connects to a real product or decision.</p></div>
+   <div class="contact-items">
+    <a href="mailto:harshikollur302@gmail.com"><span>Email</span><span>↗</span></a>
+    <a href="https://www.linkedin.com/in/harshith-devaraja-087ba0228/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>↗</span></a>
+    <a href="https://github.com/Harshithpatali" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>↗</span></a>
+    <a href="resume.html"><span>Résumé</span><span>↗</span></a>
+   </div>
+  </div>
+ </div>
+</section>
 </main>
-<footer><div class="wrap footer-row"><span>© 2026 HARSHITH DEVARAJA · BUILT WITH CURIOSITY & EVIDENCE.</span><span>MEASURE → EXPLAIN → SHIP</span></div></footer>
-<button class="backtop" id="backtop" aria-label="Back to top">↑</button>
+<footer><div class="wrap footer-row"><span>© 2026 HARSHITH DEVARAJA · BUILT WITH CARE, CURIOSITY &amp; EVIDENCE.</span><span>DESIGN PRINCIPLE: MAKE THE WORK SPEAK.</span></div></footer>
 <script>
-(()=>{const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');let w,h,pts=[];const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';pts=Array.from({length:Math.min(85,Math.floor(innerWidth/17))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22*devicePixelRatio,vy:(Math.random()-.5)*.22*devicePixelRatio}))}function draw(){ctx.clearRect(0,0,w,h);for(let i=0;i<pts.length;i++){const p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.fillStyle='rgba(100,225,237,.7)';ctx.beginPath();ctx.arc(p.x,p.y,1.4*devicePixelRatio,0,Math.PI*2);ctx.fill();for(let j=i+1;j<pts.length;j++){const q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.hypot(dx,dy);if(d<135*devicePixelRatio){ctx.strokeStyle='rgba(100,225,237,'+(1-d/(135*devicePixelRatio))*.12+')';ctx.lineWidth=devicePixelRatio;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}}if(!reduced)requestAnimationFrame(draw)}resize();draw();addEventListener('resize',resize);const progress=document.getElementById('progress'),back=document.getElementById('backtop');addEventListener('scroll',()=>{const d=document.documentElement;progress.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';back.classList.toggle('show',d.scrollTop>500)},{passive:true});back.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));const menu=document.getElementById('menu');menu.addEventListener('click',()=>{let nav=document.querySelector('.navlinks');const open=nav.style.display==='flex';nav.style.cssText=open?'':'display:flex;position:absolute;top:64px;left:0;right:0;padding:20px;background:#091827;border-bottom:1px solid rgba(177,211,239,.14);flex-direction:column;gap:18px';menu.textContent=open?'☰':'✕'});document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=640){document.querySelector('.navlinks').style.display='none';menu.textContent='☰'}}))})();
+(()=> {
+ const nav=document.getElementById('navlinks'), toggle=document.getElementById('menuToggle');
+ toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'CLOSE':'MENU';toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='MENU'}));
+ const filters=[...document.querySelectorAll('.filter')], cards=[...document.querySelectorAll('.project-card')], count=document.getElementById('projectCount');
+ function applyFilter(key){let shown=0;cards.forEach(card=>{const visible=key==='all'||card.dataset.category===key;card.hidden=!visible;if(visible)shown++});count.textContent=shown+' projects';filters.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===key)))}
+ filters.forEach(btn=>btn.addEventListener('click',()=>applyFilter(btn.dataset.filter)));
+ applyFilter('all');
+})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Harshith Devaraja","url":"https://harshithpatali.github.io/harshith-portfolio/","jobTitle":"Data Scientist and Applied Machine Learning Practitioner","email":"mailto:harshikollur302@gmail.com","sameAs":["https://github.com/Harshithpatali","https://www.linkedin.com/in/harshith-devaraja-087ba0228/"],"alumniOf":{"@type":"CollegeOrUniversity","name":"Manipal Academy of Higher Education"}}
 </script>
 </body></html>
