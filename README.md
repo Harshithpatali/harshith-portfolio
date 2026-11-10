@@ -40,7 +40,7 @@ An end-to-end Criteo experimentation workflow that checks assignment integrity a
 - **Scope:** 80,000-row sample; 40,000 control and 40,000 treatment records; 12 pre-treatment features.
 - **Experiment checks:** no sample-ratio mismatch (χ² p=1.00); maximum absolute standardised mean difference 0.0134 across the 12 features.
 - **Observed outcome:** conversion was 0.3475% in control and 0.4775% in treatment: +0.13 percentage points, +37.4% relative, p=0.0041, 95% CI +0.041 to +0.219 pp.
-- **Business scenario:** 10% targeting projected 18.5% ROI per 1M users under configured assumptions ($0.05 contact cost, $25 per conversion, 40% margin).
+- **Business scenario:** 10% targeting projected 18.5% ROI when scaled to 100,000 targeted users under configured assumptions ($0.05 contact cost, $25 per conversion, 40% margin).
 - **Interpretation:** the shipped sample is re-balanced 50/50 although the original Criteo design is approximately 85% treated. The ROI output is assumption-sensitive scenario analysis, not realised campaign profit.
 
 ## Additional projects
