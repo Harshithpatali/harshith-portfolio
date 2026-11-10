@@ -3,7 +3,7 @@
 **Live site:** https://harshithpatali.github.io/harshith-portfolio/  
 **Résumé:** https://harshithpatali.github.io/harshith-portfolio/resume.html
 
-A curated portfolio of analytical products, machine-learning research, statistical experimentation, signal-processing work and applied AI systems. The site separates three detailed case studies from a broader project index and explicitly distinguishes measured results from assumptions and research ideas.
+A curated portfolio of analytical products, machine-learning research, statistical experimentation, signal-processing work and applied AI systems, with three deep case studies and fifteen additional projects. The site separates three detailed case studies from a broader project index and explicitly distinguishes measured results from assumptions and research ideas.
 
 ## Selected case studies
 
@@ -29,6 +29,16 @@ A curated portfolio of analytical products, machine-learning research, statistic
 - [LLM-as-a-Judge for E-commerce](https://github.com/Harshithpatali/llm-judge-ecommerce) — rubric-based content evaluation for faithfulness, completeness, clarity, persuasiveness and format compliance. [Dashboard](https://llm-judge-ecommerce-c.streamlit.app/)
 - [TCS Financial Intelligence Agent](https://github.com/Harshithpatali/financial-intelligence-agent) — annual-report parsing, BGE embeddings, ChromaDB retrieval and source-grounded question answering. [Live app](https://financial-intelligence-agent-g.streamlit.app/)
 - [Math RAG Assistant](https://github.com/Harshithpatali/rag-math-assistant) — textbook-grounded complex-analysis tutor with document retrieval and LLM evaluation.
+
+### Customer intelligence and causal policy
+
+- [AI-Powered E-commerce Intelligence](https://github.com/Harshithpatali/ecommerce-intelligence) — CLV prediction, segmentation, SHAP explanations, retention prioritisation, product recommendations and AI-generated business insights. [Dashboard](https://ecommerce-intell.streamlit.app/) · [API docs](https://ecommerce-intelligence-xod0.onrender.com/docs)
+- [Causal Uplift Marketing Optimization](https://github.com/Harshithpatali/causal-uplift-marketing-optimization) — 64K-customer Hillstrom experiment, multi-arm uplift models, held-out Qini/AUUC and targeting-policy evaluation. Best AUUC 0.002054 and Qini 0.004129; the 50% targeting policy estimates 41.9 incremental conversions and $6,051 revenue on the evaluation sample, not a future guarantee.
+
+### Applied AI systems
+
+- [Multi-LLM Evaluation & Educational Synthesis](https://github.com/Harshithpatali/multi-llm-ai-platform) — parallel inference across LLM providers, a seven-dimension judge, ChromaDB memory and latency/cost dashboards. [Live app](https://multi-llm-ai-platform-cf4zxquxedber9fn3hnnxz.streamlit.app/)
+- [AI-Powered Analytics & AutoML Platform](https://github.com/Harshithpatali/ai-analytics-platform) — dataset ingestion, automated cleaning, EDA, feature engineering, model training and SHAP explainability. [Dashboard](https://ai-analytics-platform-kreefks4zqxbykugnzbob6.streamlit.app/) · [API docs](https://ai-analytics-platform-rgi6.onrender.com/docs)
 
 ### Signal processing and research
 
