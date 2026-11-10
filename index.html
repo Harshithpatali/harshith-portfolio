@@ -174,6 +174,25 @@ footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(
  .contact-panel{grid-template-columns:1fr;padding:25px 21px}.footer-row{display:block}.footer-row span{display:block;margin-top:7px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Expanded project evidence: scope, evaluation, relevance and limitations */
+.feature-detail{font-size:.73rem;line-height:1.72;color:#566057;margin:10px 0}
+.visual-caption{font:500 .58rem/1.6 var(--mono);color:#788276;margin:9px 0 0}
+.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.project-card{min-height:0;padding:24px 23px 21px}
+.project-card h3{font-size:1.52rem;margin:16px 0 9px}
+.project-description{font-size:.77rem;line-height:1.76;margin:0 0 14px}
+.project-evidence{font:500 .62rem/1.7 var(--mono);padding:11px 0;color:var(--green);margin:0}
+.project-facts{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.project-fact-label{font:500 .56rem var(--mono);letter-spacing:.11em;color:var(--rust)}
+.project-facts p{margin:4px 0 0;font-size:.69rem;line-height:1.72;color:#59645b}
+.project-facts p strong{color:var(--ink)}
+.project-limit{font-size:.66rem;line-height:1.7;color:#7b6156;background:#f7f1ed;border-left:2px solid var(--rust);padding:9px 11px;margin:11px 0}
+.project-bottom{margin-top:9px}
+.project-stack{font-size:.57rem}
+@media(max-width:920px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.project-grid{grid-template-columns:1fr}.project-card{padding:20px 17px}.feature-detail{font-size:.71rem}}
+
 </style>
 </head>
 <body>
@@ -233,49 +252,64 @@ footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(
    <p>These are the projects that best show how I approach data problems: understand the product question, build a defensible analysis, measure against a baseline and explain the limits.</p>
   </div>
   <div class="feature-grid">
-   <article class="feature">
-    <div>
-     <div class="feature-label">01 · Customer intelligence / graph analytics</div>
-     <h3>Customer Intelligence &amp; Graph Anomaly Lab</h3>
-     <p>A customer investigation workspace that connects behaviour profiles, segmentation, anomaly ranking and shared-entity networks. The goal is not to label someone as fraudulent; it is to help an analyst understand unusual behaviour and inspect the surrounding context.</p>
-     <div class="feature-metrics">
-      <div><strong>50K</strong><span>Transaction graph cap</span></div>
-      <div><strong>60 / 40</strong><span>IF / LOF score blend</span></div>
-      <div><strong>3</strong><span>Entity types: user, device, IP</span></div>
-     </div>
-     <div class="caveat"><b>Interpretation:</b> the historical fraud class is excluded from the current unsupervised workflow. Anomaly ranks are cohort-relative review signals—not calibrated fraud probabilities.</div>
-     <div class="feature-links"><a href="https://github.com/Harshithpatali/Graph-anomaly-supervised-neural-prediction" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://graph-anomaly-supervised-neural-prediction-v1.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
-    </div>
-    <div class="feature-art">
-     <svg viewBox="0 0 480 280" role="img" aria-label="Illustrative user device and IP graph showing shared entities">
-      <g stroke="#8ca08b" stroke-width="1.4" fill="none"><path d="M65 75 L185 42 L318 86 L410 177 L292 230 L128 203 L65 75 M185 42 L292 230 M65 75 L128 203 M318 86 L128 203 M410 177 L185 42 M318 86 L292 230 M185 42 L318 86"/></g>
-      <g fill="#315a43"><circle cx="65" cy="75" r="8"/><circle cx="185" cy="42" r="7"/><circle cx="318" cy="86" r="9"/><circle cx="410" cy="177" r="7"/><circle cx="292" cy="230" r="8"/><circle cx="128" cy="203" r="7"/></g>
-      <g fill="#a95e45"><circle cx="240" cy="137" r="14"/><circle cx="240" cy="137" r="23" fill="none" stroke="#a95e45" stroke-width="1.3"/></g>
-      <g fill="#68766a" font-family="DM Mono,monospace" font-size="10"><text x="28" y="57">USER</text><text x="160" y="23">DEVICE</text><text x="321" y="65">IP NODE</text><text x="254" y="132">SHARED</text><text x="255" y="144">ENTITY</text><text x="22" y="265">RELATIONSHIPS ARE CONTEXT, NOT PROOF</text></g>
-     </svg>
-    </div>
-   </article>
-   <article class="feature">
-    <div class="feature-label">02 · SQL / customer analytics</div>
-    <h3>Brazilian E-commerce Intelligence</h3>
-    <p>A SQL-first analytics product over Olist, with careful table grain, reusable analytical models, customer segmentation, cohorts, purchase survival and a 7-page dashboard.</p>
-    <div class="feature-metrics"><div><strong>16</strong><span>SQL build stages</span></div><div><strong>20+</strong><span>Tables &amp; views</span></div><div><strong>57</strong><span>Point-in-time features</span></div></div>
-    <div class="caveat"><b>Model result:</b> holdout PR-AUC 0.01048 vs 0.01665 for the lifetime-frequency baseline. The churn model remains research-only; the stronger story is the data and customer analytics layer.</div>
-    <div class="feature-links"><a href="https://github.com/Harshithpatali/brazilian-ecommerce-data-science" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://olist-ecommerce-ds.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
-    <details><summary>What the project demonstrates</summary><p class="detail-text">Order-grain modelling avoids multiplying item and payment rows. Customer identity uses the stable customer_unique_id. The platform includes RFM segments, cohort retention, Kaplan–Meier time-to-second-purchase analysis, statistical testing and an assumption-led campaign simulator.</p></details>
-   </article>
-   <article class="feature">
-    <div class="feature-label">03 · Causal inference / experimentation</div>
-    <h3>Causal Experimentation Intelligence</h3>
-    <p>An experiment workflow that validates allocation and covariate balance before estimating lift, then studies heterogeneous treatment effects and targeting policies.</p>
-    <div class="feature-metrics"><div><strong>80K</strong><span>Criteo sample rows</span></div><div><strong>+0.13 pp</strong><span>Observed conversion lift</span></div><div><strong>0.0041</strong><span>Two-proportion p-value</span></div></div>
-    <div class="caveat"><b>Context:</b> the shipped sample is balanced 50/50 although the original benchmark design is approximately 85% treated. The ROI output is a scenario projection under explicit cost and margin assumptions—not realised campaign profit.</div>
-    <div class="feature-links"><a href="https://github.com/Harshithpatali/causal_experimentation_platform" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://causal-ai-customer-growth-intelligence.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
-    <details><summary>Evaluation details</summary><p class="detail-text">The sample contains 40K treatment and 40K control records. The conversion difference is 0.4775% vs 0.3475%, with 95% CI +0.041 to +0.219 percentage points. The workflow surfaces sample-ratio mismatch, standardised mean differences, power/MDE, ATE/ATT and S-, T- and X-learner estimates.</p></details>
-   </article>
+ <article class="feature">
+  <div>
+   <div class="feature-label">01 · Customer intelligence / graph analytics</div>
+   <h3>Customer Intelligence &amp; Graph Anomaly Lab</h3>
+   <p>A customer investigation workspace built from behavioural profiles and entity relationships. It combines customer-level summaries, K-means segmentation, a cohort-relative behaviour index, Isolation Forest and Local Outlier Factor anomaly ranking, and a sampled user–device–IP graph. Analysts can move from a segment-level signal to a customer history and then inspect shared entities that may explain the connection.</p>
+   <div class="feature-metrics">
+    <div><strong>50K</strong><span>Transaction input cap</span></div>
+    <div><strong>60 / 40</strong><span>Isolation Forest / LOF</span></div>
+    <div><strong>100K</strong><span>Maximum graph edges</span></div>
+   </div>
+   <p class="feature-detail"><b>Scope:</b> eight dashboard workspaces cover overview, Customer 360, customer exploration, segmentation, graph intelligence, anomaly review, executive export and methodology. Purchase timelines retain up to 50 recent transactions per customer.</p>
+   <p class="feature-detail"><b>Analytical design:</b> the anomaly score blends Isolation Forest percentile (60%) with LOF percentile (40%). A separate 0–100 behavioural risk index is heuristic and excluded from anomaly model inputs to avoid circularity.</p>
+   <div class="caveat"><b>Interpretation:</b> the historical fraud class is dropped from the current unsupervised workflow. Risk and anomaly outputs are cohort-relative investigation signals—not calibrated fraud probabilities or evidence of wrongdoing. They should not be used alone to block or penalise customers.</div>
+   <div class="feature-links"><a href="https://github.com/Harshithpatali/Graph-anomaly-supervised-neural-prediction" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://graph-anomaly-supervised-neural-prediction-v1.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
   </div>
- </div>
-</section>
+  <div class="feature-art">
+   <svg viewBox="0 0 480 280" role="img" aria-label="Illustrative user device and IP graph showing shared entities">
+    <g stroke="#8ca08b" stroke-width="1.4" fill="none"><path d="M65 75 L185 42 L318 86 L410 177 L292 230 L128 203 L65 75 M185 42 L292 230 M65 75 L128 203 M318 86 L128 203 M410 177 L185 42 M318 86 L292 230 M185 42 L318 86"/></g>
+    <g fill="#315a43"><circle cx="65" cy="75" r="8"/><circle cx="185" cy="42" r="7"/><circle cx="318" cy="86" r="9"/><circle cx="410" cy="177" r="7"/><circle cx="292" cy="230" r="8"/><circle cx="128" cy="203" r="7"/></g>
+    <g fill="#a95e45"><circle cx="240" cy="137" r="14"/><circle cx="240" cy="137" r="23" fill="none" stroke="#a95e45" stroke-width="1.3"/></g>
+    <g fill="#68766a" font-family="DM Mono,monospace" font-size="10"><text x="28" y="57">USER</text><text x="160" y="23">DEVICE</text><text x="321" y="65">IP NODE</text><text x="254" y="132">SHARED</text><text x="255" y="144">ENTITY</text><text x="22" y="265">RELATIONSHIPS ARE CONTEXT, NOT PROOF</text></g>
+   </svg>
+   <p class="visual-caption">Relationship exploration is bounded and descriptive; edges do not establish causation.</p>
+  </div>
+ </article>
+ <article class="feature">
+  <div>
+   <div class="feature-label">02 · SQL / customer analytics</div>
+   <h3>Brazilian E-commerce Intelligence</h3>
+   <p>A SQL-first marketplace analytics product over the public Olist dataset (~100K orders). The data model respects source-table grain, aggregates item and payment facts before joining, and uses the stable <code>customer_unique_id</code> for customer-level analysis.</p>
+   <div class="feature-metrics">
+    <div><strong>16</strong><span>SQL build stages</span></div><div><strong>20+</strong><span>Analytics tables / views</span></div><div><strong>57</strong><span>Point-in-time features</span></div>
+   </div>
+   <p class="feature-detail"><b>Product scope:</b> seven dashboard pages cover executive KPIs, customers/RFM, retention cohorts, products, sellers, delivery and second-purchase propensity. The analysis adds Kaplan–Meier time-to-second-purchase, statistical testing and a scenario-based campaign simulator.</p>
+   <p class="feature-detail"><b>Model scope:</b> 180-day historical features predict a second delivered purchase in the next 90 days. Evaluation uses date-grouped temporal folds, a 90-day purge, a separate validation threshold and an untouched chronological holdout.</p>
+   <div class="caveat"><b>Holdout finding:</b> on 143,208 test snapshots, PR-AUC was 0.01048 versus 0.01665 for lifetime-frequency ranking. At 5%, 10% and 20% campaign capacity, model precision (1.21%, 1.01%, 0.87%) did not beat baseline precision (1.69%, 1.21%, 0.88%). The artifact is correctly marked <b>research-only</b>; the stronger result is the SQL and customer analytics platform, not the churn predictor.</div>
+   <div class="feature-links"><a href="https://github.com/Harshithpatali/brazilian-ecommerce-data-science" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://olist-ecommerce-ds.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
+   <details><summary>Data modelling and validation notes</summary><p class="detail-text">The 16 SQL stages include source profiling, data quality, order-grain modelling, KPIs, customer analytics, cohort retention, product/seller/delivery analysis, statistical analysis, point-in-time features, reporting and validation. Item and payment rows are aggregated separately to prevent many-to-many multiplication. Customer-level validation checks timestamp availability, target recomputation, snapshot uniqueness and label-window completeness.</p></details>
+  </div>
+ </article>
+ <article class="feature">
+  <div>
+   <div class="feature-label">03 · Causal inference / experimentation</div>
+   <h3>Causal Experimentation Intelligence</h3>
+   <p>An experiment-validation and uplift workflow on an 80,000-row Criteo sample. It checks randomisation and covariate balance before estimating conversion lift, then compares S-, T- and X-learners and translates heterogeneous treatment estimates into a capacity-constrained campaign scenario.</p>
+   <div class="feature-metrics">
+    <div><strong>80K</strong><span>Sample rows · 40K / arm</span></div>
+    <div><strong>+0.13 pp</strong><span>Observed conversion lift</span></div>
+    <div><strong>0.0041</strong><span>Two-proportion p-value</span></div>
+   </div>
+   <p class="feature-detail"><b>Experiment checks:</b> no sample-ratio mismatch (χ² p=1.00); all 12 pre-treatment features passed the |SMD| &lt; 0.1 balance threshold, with maximum absolute SMD 0.0134. The observed conversion rates were 0.3475% control and 0.4775% treatment; 95% CI for absolute lift was +0.041 to +0.219 percentage points.</p>
+   <p class="feature-detail"><b>Business translation:</b> the simulator scales ranked targeting into incremental conversions, contribution and ROI. In the reported configuration, top-10% targeting projects 18.5% ROI per 1M users under $0.05 contact cost, $25 revenue per conversion and 40% margin.</p>
+   <div class="caveat"><b>Context:</b> the shipped sample is re-balanced to 50/50, while the source Criteo design is approximately 85% treated. The lift is an experimental-sample result; the 18.5% ROI is an assumption-sensitive scenario estimate, not realised campaign profit.</div>
+   <div class="feature-links"><a href="https://github.com/Harshithpatali/causal_experimentation_platform" target="_blank" rel="noopener noreferrer">Repository ↗</a><a href="https://causal-ai-customer-growth-intelligence.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></div>
+  </div>
+ </article>
+</div>
+ 
 
 <section id="projects">
  <div class="wrap">
@@ -293,129 +327,202 @@ footer{padding:25px 0 35px;border-top:1px solid var(--line);font:500 .58rem var(
    <div class="project-count" id="projectCount" aria-live="polite">11 projects</div>
   </div>
   <div class="project-grid" id="projectGrid">
+
 <article class="project-card" data-category="data">
  <div class="project-top"><span class="project-number">04</span><span class="project-category">Forecasting & optimisation</span></div>
- <h3>Retail Demand & Inventory Optimisation</h3><p class="project-description">A forecasting pipeline that connects demand estimates to a periodic-review inventory policy. It compares statistical baselines, calibrates uncertainty from out-of-sample residuals, then simulates holding, ordering and stockout costs.</p>
- <div class="project-evidence"><span>200 item–store series · 388,200 feature rows</span></div>
- <p class="project-impact">On the held-out period, the selected policy reduced simulated total cost by 16.21% and increased service level by 2.46 percentage points. The economics use documented demonstration assumptions, not retailer-calibrated costs.</p>
+ <h3>Retail Demand & Inventory Optimisation</h3>
+ <p class="project-description">An end-to-end retail decision system that joins global demand forecasting with a periodic-review (R,S) inventory policy. It profiles intermittent SKU demand, compares forecasting baselines, estimates uncertainty from out-of-sample residuals and simulates the cost of stock, replenishment and shortages.</p>
+ <div class="project-evidence"><span>Five-way validation comparison: XGBoost WAPE 0.2808 vs 0.6873 for the naive forecast (59.2% lower). Held-out inventory simulation: total modeled cost −16.21%, stockout units −30.65%, service level 91.96% → 94.42% (+2.46 pp).</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>M5 Forecasting data: 30,490 candidate item–store series and ~65.7M historical units. The reproducible deployment subset selects 200 series and produces 388,200 feature rows; 68.2% of item–store–day observations have zero demand.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Shows how forecasting quality affects a concrete operating decision. The selected policy holds less average inventory and reduces stockouts, while ordering cost rises 124.75% because it replenishes more frequently in smaller quantities.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> Cost and service results depend on explicit demonstration assumptions (e.g. 7-day lead/review periods and configured holding, ordering and stockout costs); they are not calibrated savings for a named retailer.</p>
  <div class="project-bottom"><span class="project-stack">Python · XGBoost · LightGBM · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/retail-demand-inventory-optimization" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://retail-demand-inventory-optimization-v1.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://retail-demand-inventory-optimization.onrender.com/" target="_blank" rel="noopener noreferrer">API ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="data">
  <div class="project-top"><span class="project-number">05</span><span class="project-category">Data engineering & ML</span></div>
- <h3>Enterprise ML Platform</h3><p class="project-description">An Olist customer pipeline built with Hadoop HDFS and PySpark medallion layers, temporal feature generation, model comparison, SHAP explanations, a FastAPI prediction service and Streamlit operations dashboard.</p>
- <div class="project-evidence"><span>180-day lookback · 90-day horizon · 19 temporal features · 16 tests</span></div>
- <p class="project-impact">The repository documents a heavily imbalanced target population and the limits of headline classification metrics. I treat this as a data-engineering, reproducibility and serving project—not evidence of a production-ready churn model.</p>
- <div class="project-bottom"><span class="project-stack">Python · Hadoop · PySpark · XGBoost · SHAP · FastAPI</span><div class="project-links"><a href="https://github.com/Harshithpatali/enterprise-ml-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://enterprise-ml-platform.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
+ <h3>Enterprise ML Platform</h3>
+ <p class="project-description">A distributed-style customer data pipeline built from raw Olist files through Hadoop HDFS and PySpark Bronze/Silver/Gold layers, then into temporal features, model comparison, SHAP analysis, FastAPI inference and a five-page Streamlit dashboard.</p>
+ <div class="project-evidence"><span>16 automated tests are reported. The target is highly imbalanced (about 96.1% churn observations); the README notes that an always-churn rule already yields ~0.981 F1 and that the model’s added value must be judged on the minority retained-customer class.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>The documented audit covers 95,194 customer-snapshot rows and 93,358 customers, with 19 temporal predictors, a 180-day lookback and a 90-day forward outcome. The engineering workflow includes HDFS ingestion, Parquet layers, schema checks and batch prediction.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Demonstrates practical big-data setup, time-aware feature construction, persisted model contracts, explainable predictions, API serving and a tested dashboard workflow—not just a notebook model.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The project’s own audit warns that impressive headline F1/PR-AUC can be dominated by prevalence. It recommends evaluating the active/repeat-customer cohort separately before claiming broad churn usefulness.</p>
+ <div class="project-bottom"><span class="project-stack">Python · Hadoop HDFS · PySpark · XGBoost · SHAP · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/enterprise-ml-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://enterprise-ml-platform.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="research">
  <div class="project-top"><span class="project-number">06</span><span class="project-category">Signal processing & forensics</span></div>
- <h3>DeepFake Noise & Wavelet Forensics</h3><p class="project-description">An interpretable image-forensics study testing whether spatial noise statistics and multi-scale wavelet coefficients can distinguish real from synthetic face images without an end-to-end CNN.</p>
- <div class="project-evidence"><span>304,154 images · 105 engineered features</span></div>
- <p class="project-impact">Validation ROC-AUC 0.9249, PR-AUC 0.9124 and accuracy 0.9086. These are validation-set results; the repo keeps a separate test split. Wavelet/noise features provide a small measured gain over spatial features alone on this dataset.</p>
+ <h3>DeepFake Noise & Wavelet Forensics</h3>
+ <p class="project-description">An interpretable image-forensics study testing whether spatial noise statistics and multi-resolution wavelet coefficients capture traces left by synthetic or manipulated face imagery. A fixed grayscale preprocessing pipeline feeds feature selection and regularised logistic regression rather than an end-to-end CNN.</p>
+ <div class="project-evidence"><span>Validation ROC-AUC 0.9249, but the locked official test is materially lower: ROC-AUC 0.6623, PR-AUC 0.6675, accuracy 0.6232, recall 0.8758 and precision 0.6153. A separate 100-image blind holdout produced ROC-AUC 0.4872 and 56% accuracy.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>DeepFakeFusion-304K: 304,154 labelled images (230,361 train / 48,289 validation / 25,504 official test). Each 256×256 image produces 105 handcrafted descriptors: spatial, high-frequency noise, gradient/Laplacian and db2 level-3 wavelet statistics.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>The main contribution is an auditable comparison of spatial and multi-scale forensic features, with a measurable but modest wavelet/noise advantage on the working dataset. The test/holdout gap is a useful lesson in generalisation and source shift.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The strong validation numbers do not transfer to the locked test and small blind holdout. It should be treated as a research prototype; it does not establish universal deepfake detection or forensic-grade reliability.</p>
  <div class="project-bottom"><span class="project-stack">Python · PyWavelets · scikit-learn · Logistic Regression</span><div class="project-links"><a href="https://github.com/Harshithpatali/deepfake-noise-wavelet-ml" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://deepfake-noise-wavelet-ml-hd.streamlit.app/" target="_blank" rel="noopener noreferrer">Live app ↗</a><a href="https://deepfake-noise-wavelet-ml.onrender.com/" target="_blank" rel="noopener noreferrer">API ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="ai">
  <div class="project-top"><span class="project-number">07</span><span class="project-category">LLM evaluation</span></div>
- <h3>LLM Prompt Evaluation & Benchmarking</h3><p class="project-description">A reusable evaluation harness for structured attribute extraction from noisy product text. Prompt strategies and model providers are modular; runs are compared on extraction quality and operational cost, not anecdotal prompt preference.</p>
- <div class="project-evidence"><span>ABO product data · 4 implemented prompt strategies</span></div>
- <p class="project-impact">Implemented strategies include zero-shot, few-shot, chain-of-thought and structured JSON. Role-based and self-consistency variants are documented as planned rather than shipped.</p>
- <div class="project-bottom"><span class="project-stack">Python · FastAPI · Streamlit · LLM APIs · Pydantic</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-prompt-benchmark" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-prompt-benchmark-a.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
+ <h3>LLM Prompt Evaluation & Benchmarking</h3>
+ <p class="project-description">A reusable evaluation harness for extracting structured product attributes from noisy catalogue text. It compares prompting approaches against ground-truth JSON and tracks correctness, schema reliability, hallucinated attributes, latency, tokens and estimated cost.</p>
+ <div class="project-evidence"><span>In one documented Groq/Llama-3.1-8B-Instant example run, few-shot exact match was 0.417 versus 0.097 for zero-shot; product-type accuracy was 0.833. This is a single logged run, not a cross-model or statistically stable benchmark.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>Built on the Amazon Berkeley Objects (ABO) product dataset. Each output is checked against a 10-field schema (brand, colour, material, category, size, style, gender, pattern, department and item type). Four strategies are implemented: zero-shot, few-shot, chain-of-thought and structured JSON; OpenRouter and Groq are documented providers.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Turns prompt selection into a repeatable experiment with same-sample comparisons, MLflow run tracking, a persisted leaderboard and retry/JSON-repair handling for unreliable provider responses.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> Role-based and self-consistency prompting are planned, not implemented. The example result is run-specific; it should not be read as a universal few-shot uplift.</p>
+ <div class="project-bottom"><span class="project-stack">Python · FastAPI · Streamlit · MLflow · Pydantic · Groq / OpenRouter</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-prompt-benchmark" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-prompt-benchmark-a.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="ai">
  <div class="project-top"><span class="project-number">08</span><span class="project-category">AI reliability</span></div>
- <h3>LLM Reliability & Evaluation Platform</h3><p class="project-description">An asynchronous quality-monitoring architecture that separates inference from background evaluation, persists telemetry and compares historical and recent score distributions.</p>
- <div class="project-evidence"><span>KS test · Wasserstein distance · asynchronous workers</span></div>
- <p class="project-impact">The platform demonstrates the mechanics of telemetry collection, background scoring and statistical drift diagnostics. The dashboard and API are deployed as separate services.</p>
- <div class="project-bottom"><span class="project-stack">FastAPI · Celery · Redis · SciPy · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-evaluation-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-evaluation-platform-q.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://llm-evaluation-platform-1.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
+ <h3>LLM Reliability & Evaluation Platform</h3>
+ <p class="project-description">A production-style observability prototype that decouples user-facing LLM inference from asynchronous quality evaluation. FastAPI ingests requests, Celery workers score outputs, Redis stores telemetry, and a statistical layer monitors changes in evaluation-score distributions.</p>
+ <div class="project-evidence"><span>The monitoring layer includes two-sample Kolmogorov–Smirnov testing and Wasserstein distance to compare historical and recent score distributions. The README describes the metrics and deployment but does not publish a fixed benchmark or validated drift-detection score.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>The evaluator scores correctness, clarity, helpfulness, safety and professionalism. Background tasks are separated from inference so a request does not need to wait for the full evaluation and reporting pipeline.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Demonstrates the operational pieces needed around LLM inference: asynchronous task processing, telemetry history, score trends, drift diagnostics, API health and separate dashboard/API deployments.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> This is an engineering prototype, not a demonstrated production reliability guarantee. Drift thresholds, false-alarm behaviour and evaluator agreement still need a controlled validation study.</p>
+ <div class="project-bottom"><span class="project-stack">FastAPI · Celery · Redis · SciPy · Streamlit · Prometheus</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-evaluation-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-evaluation-platform-q.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://llm-evaluation-platform-1.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="ai">
  <div class="project-top"><span class="project-number">09</span><span class="project-category">LLM evaluation</span></div>
- <h3>LLM-as-a-Judge for E-commerce</h3><p class="project-description">A rubric-based evaluator for generated product titles, descriptions and attributes. The judge compares generated content with source product information across accuracy, completeness, clarity, persuasiveness and format compliance.</p>
- <div class="project-evidence"><span>5 evaluation dimensions · single and batch workflows</span></div>
- <p class="project-impact">Focuses on why text-similarity metrics alone are insufficient for assessing factuality and usefulness. Supports review of scores, criterion-level reasoning and batch quality patterns.</p>
+ <h3>LLM-as-a-Judge for E-commerce</h3>
+ <p class="project-description">A rubric-based evaluation service for generated product titles, descriptions and structured attributes. It compares generated content with source product information, returns criterion scores and written reasoning, and supports single-item as well as batch evaluation.</p>
+ <div class="project-evidence"><span>Batch analysis exposes average overall score, per-criterion scores, score distributions, best/worst products and correlations between rubric dimensions. The repository does not publish a fixed labelled benchmark or measured judge-agreement statistic.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>Five dimensions: accuracy/faithfulness, completeness, clarity/readability, persuasiveness/SEO and format compliance. Multiple LLM providers/judges are supported; the FastAPI service feeds a Streamlit results and analysis dashboard.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Provides a more business-relevant evaluation lens than exact-match or ROUGE alone by inspecting factual support, missing product information and output-format compliance.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> LLM-as-a-Judge scores can inherit evaluator bias and model variability. Human-reviewed calibration and agreement testing against labelled examples remain important before using scores as a release gate.</p>
  <div class="project-bottom"><span class="project-stack">Python · FastAPI · Streamlit · Multi-provider LLMs</span><div class="project-links"><a href="https://github.com/Harshithpatali/llm-judge-ecommerce" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://llm-judge-ecommerce-c.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://llm-judge-ecommerce.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="data">
  <div class="project-top"><span class="project-number">10</span><span class="project-category">Statistics & experimentation</span></div>
- <h3>Bayesian & Sequential Experimentation</h3><p class="project-description">A research-oriented experiment lab using synthetic data with known ground truth to study power, frequentist and Bayesian A/B tests, sequential looks and multiple comparisons.</p>
- <div class="project-evidence"><span>Bayesian credible intervals · always-valid p-values · FDR</span></div>
- <p class="project-impact">Synthetic experiments make it possible to inspect Type I error, power and calibration under optional stopping—questions that are difficult to answer from a single real-world A/B dataset.</p>
- <div class="project-bottom"><span class="project-stack">Python · SciPy · Beta-Binomial · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/bayesian-sequential-experimentation" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+ <h3>Bayesian & Sequential Experimentation</h3>
+ <p class="project-description">A teaching and research lab for controlled experiments using synthetic data with known ground truth. It makes it possible to inspect inference behaviour under repeated looks, small effects and multiple comparisons—not just run one static A/B test.</p>
+ <div class="project-evidence"><span>The code exposes Type I error, statistical power, credible intervals, P(treatment > control), expected loss and always-valid p-value workflows. The repository does not publish a consolidated Monte Carlo calibration result, so no success rate is claimed here.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>Six modules: Bernoulli/Normal synthetic experiment generation, power and sample-size analysis, frequentist two-proportion tests, Beta–Binomial Bayesian inference, sequential tests and multiplicity control (Bonferroni, Holm and Benjamini–Hochberg FDR).</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Helps demonstrate why stopping rules, prior assumptions and multiple testing matter for experiment decisions; synthetic truth lets the user check whether a method behaves as intended.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> It is a learning/research environment. Simulation outputs depend on the selected data-generating process and should not be mistaken for evidence about a live commercial experiment.</p>
+ <div class="project-bottom"><span class="project-stack">Python · SciPy · Beta–Binomial · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/bayesian-sequential-experimentation" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="ai">
  <div class="project-top"><span class="project-number">11</span><span class="project-category">Applied AI & retrieval</span></div>
- <h3>TCS Financial Intelligence Agent</h3><p class="project-description">A report-grounded financial research assistant that parses annual reports, creates BGE embeddings, stores vectors in ChromaDB and generates retrieval-backed answers through a FastAPI service.</p>
- <div class="project-evidence"><span>Annual-report ingestion · semantic search · cited context</span></div>
- <p class="project-impact">The product connects long-form corporate disclosures to natural-language questions and executive summaries. Answers are designed to be grounded in retrieved source passages.</p>
- <div class="project-bottom"><span class="project-stack">Python · BGE Embeddings · ChromaDB · FastAPI · Groq</span><div class="project-links"><a href="https://github.com/Harshithpatali/financial-intelligence-agent" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://financial-intelligence-agent-g.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
+ <h3>TCS Financial Intelligence Agent</h3>
+ <p class="project-description">A retrieval-augmented financial research assistant that converts TCS annual-report PDFs into a structured Markdown knowledge base, embeds document chunks and returns answers grounded in retrieved passages.</p>
+ <div class="project-evidence"><span>The service exposes source-grounded question answering and executive insights; no retrieval precision/recall, citation accuracy or answer-faithfulness benchmark is published in the README.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>The repository lists six annual-report knowledge files spanning FY2020–21 through FY2025–26. The pipeline parses PDFs, creates chunks and metadata, embeds with BAAI BGE models, stores vectors in ChromaDB and serves retrieval-backed answers through FastAPI and Streamlit.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Reduces manual navigation through long corporate disclosures and creates a repeatable path from document ingestion to semantic search and cited financial answers.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The quality of an answer depends on document coverage, chunking, retrieval and generation. Source citations should be checked against the original annual report for material decisions.</p>
+ <div class="project-bottom"><span class="project-stack">Python · BGE Embeddings · ChromaDB · FastAPI · Groq · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/financial-intelligence-agent" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://financial-intelligence-agent-g.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="research">
  <div class="project-top"><span class="project-number">12</span><span class="project-category">Quantitative research</span></div>
- <h3>Sensex Quant Lab</h3><p class="project-description">A next-session Open/Close forecasting workflow with shared feature code, model search, TimeSeriesSplit validation, a FastAPI prediction layer and a Streamlit quantitative dashboard.</p>
- <div class="project-evidence"><span>Dual-target forecasts · scheduled weekday retraining · model leaderboard</span></div>
- <p class="project-impact">The workflow uses chronological evaluation and treats outputs as statistical research—not trading recommendations or evidence of profitable returns.</p>
- <div class="project-bottom"><span class="project-stack">Python · TimeSeriesSplit · scikit-learn · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/Sensex_Quant_Lab" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+ <h3>Sensex Quant Lab</h3>
+ <p class="project-description">A next-session forecasting system for BSE Sensex opening and closing returns. It uses shared feature code, automated model search, time-ordered validation, persisted model artefacts, a FastAPI prediction service and a Streamlit market-regime dashboard.</p>
+ <div class="project-evidence"><span>On the recorded holdout, the Open-return Ridge model had MAE 0.00342 and directional accuracy 59.96%, but R² was −0.017. For Close returns, the mean dummy baseline ranked first (MAE 0.00599; directional accuracy 52.86%).</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>Latest committed evaluation manifest: 7,229 rows, 6,145 train / 1,084 test, 108 engineered features, three TimeSeriesSplit folds with a one-row gap and five candidate regressors (Ridge, Lasso, ElasticNet, Huber and SVR).</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Demonstrates a full scheduled quantitative research workflow—data update, feature computation, candidate search, leaderboard, model artefacts and serving—while making baseline comparisons visible.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The latest evaluation does not establish a robust forecast edge, especially for Close returns. The app is a statistical research tool, not a trading signal or evidence of profitability.</p>
+ <div class="project-bottom"><span class="project-stack">Python · scikit-learn · TimeSeriesSplit · FastAPI · Streamlit · GitHub Actions</span><div class="project-links"><a href="https://github.com/Harshithpatali/Sensex_Quant_Lab" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="ai">
  <div class="project-top"><span class="project-number">13</span><span class="project-category">Applied AI & retrieval</span></div>
- <h3>Math RAG Assistant</h3><p class="project-description">A complex-analysis learning assistant built around textbook ingestion, retrieval-augmented generation and an evaluation layer for technical explanations.</p>
- <div class="project-evidence"><span>Document ingestion · retrieval pipeline · LLM-as-a-Judge evaluation</span></div>
- <p class="project-impact">Explores how external mathematical references can support more grounded tutoring than unconstrained generation alone.</p>
- <div class="project-bottom"><span class="project-stack">Python · RAG · Embeddings · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/rag-math-assistant" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+ <h3>Math RAG Assistant</h3>
+ <p class="project-description">A textbook-grounded tutor for Complex Analysis. Learners ingest PDF or text references, retrieve relevant passages for a question and generate an explanation with an evaluation layer that checks faithfulness and relevance.</p>
+ <div class="project-evidence"><span>The API exposes health, vector-store statistics and question-answering endpoints. No fixed retrieval hit-rate, faithfulness benchmark or answer accuracy test set is published.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>The repository separates document ingestion/chunking, a core RAG pipeline, an LLM-as-a-Judge evaluator, FastAPI backend and Streamlit frontend. The vector index is persisted for reuse between sessions/deployments.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Shows a focused RAG use case where retrieval should connect technical explanations to a supplied mathematical source rather than rely entirely on model memory.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The answer can still misinterpret retrieved mathematics. Evaluation against expert-authored question/answer pairs and citation-level checking would be needed before treating it as a dependable tutor.</p>
+ <div class="project-bottom"><span class="project-stack">Python · RAG · FAISS · FastAPI · Streamlit · LLM-as-a-Judge</span><div class="project-links"><a href="https://github.com/Harshithpatali/rag-math-assistant" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
 </article>
 
 <article class="project-card" data-category="research">
  <div class="project-top"><span class="project-number">14</span><span class="project-category">Wavelet signal processing</span></div>
- <h3>Wavelet Voice Lab</h3><p class="project-description">A wavelet-domain voice communication simulator: DWT decomposition, thresholding, keyed coefficient permutation, noisy-channel simulation and receiver-side reconstruction.</p>
- <div class="project-evidence"><span>AWGN and packet-loss experiments · WAV transmission · reversible transform</span></div>
- <p class="project-impact">An academic prototype for studying signal representation and robustness. The repository explicitly states that keyed scrambling is not cryptography; security claims are not made.</p>
- <div class="project-bottom"><span class="project-stack">Python · PyWavelets · NumPy · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/Wavelet-Domain-Robust-Voice-Communication-Lab" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://wavelet-domain-robust-voice-communication-lab.streamlit.app/" target="_blank" rel="noopener noreferrer">Live app ↗</a></div></div>
+ <h3>Wavelet Voice Lab</h3>
+ <p class="project-description">A wavelet-domain voice-communication simulator: discrete wavelet decomposition, coefficient thresholding, keyed permutation, noisy-channel transport and receiver-side reconstruction. It includes a browser-based transmitter/receiver path and a headless experiment runner.</p>
+ <div class="project-evidence"><span>The verification dashboard reports recovered SNR, MSE, correlation, retained coefficients and packet recovery. Unit tests cover codec round-trip, channel behaviour and permutation reversibility; no aggregate speech-quality benchmark is published.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>Wavelet controls cover Haar, db2–db8, sym4 and coif1 with decomposition levels 1–6. The research lab sweeps up to 180 parameter combinations across SNR, packet loss, threshold and wavelet; it supports AWGN and burst-loss channels, CRC32 packet checks and one-packet-per-four XOR recovery.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>A hands-on signal-processing demonstration that links multi-resolution transforms to channel robustness and audio reconstruction, rather than a static wavelet notebook.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The custom keyed permutation is reversible obfuscation—not cryptography. The README notes that real two-device listening and live-call DSP still need broader testing; WebRTC DTLS-SRTP is the actual network media protection.</p>
+ <div class="project-bottom"><span class="project-stack">Python · PyWavelets · NumPy · Streamlit · Audio DSP</span><div class="project-links"><a href="https://github.com/Harshithpatali/Wavelet-Domain-Robust-Voice-Communication-Lab" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://wavelet-domain-robust-voice-communication-lab.streamlit.app/" target="_blank" rel="noopener noreferrer">Live app ↗</a></div></div>
 </article>
+
 <article class="project-card" data-category="data">
- <div class="project-top"><span class="project-number">15</span><span class="project-category">Customer value &amp; recommendations</span></div>
+ <div class="project-top"><span class="project-number">15</span><span class="project-category">Customer value & recommendations</span></div>
  <h3>AI-Powered E-commerce Intelligence</h3>
- <p class="project-description">A customer and product intelligence product that combines SQL analytics with CLV prediction, behavioural segments, SHAP explanations, retention prioritisation and personalised product recommendations. The LLM layer turns structured analytical output into narrative insights.</p>
- <div class="project-evidence"><span>CLV · segmentation · SHAP · batch scoring · recommendations</span></div>
- <p class="project-impact">A broader customer decision workflow than a single churn model: estimate future value, understand the drivers, identify retention opportunities and surface relevant products.</p>
- <div class="project-bottom"><span class="project-stack">PYTHON · POSTGRESQL · XGBOOST · SHAP · FASTAPI · STREAMLIT</span>
- <div class="project-links"><a href="https://github.com/Harshithpatali/ecommerce-intelligence" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://ecommerce-intell.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://ecommerce-intelligence-xod0.onrender.com/docs" target="_blank" rel="noopener noreferrer">API ↗</a></div></div>
+ <p class="project-description">A customer and product intelligence product over Olist that combines SQL analytics, CLV prediction, value-based segmentation, SHAP explanations, retention prioritisation, product recommendations and an LLM narrative layer.</p>
+ <div class="project-evidence"><span>The CLV evaluation report records MAE 0.922, RMSE 17.30 and R² 0.073. Mean predicted future revenue (0.068) is far below mean actual future revenue (0.934), indicating substantial calibration/underprediction concerns.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>The committed evaluation report covers 96,096 customer records, identifies 6,012 high-value inactive customers and contains 3,640 recommendation rows. The API exposes scoring, batch prediction, explainability, customer history, recommendation and retention endpoints.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Demonstrates an end-to-end decision workflow from customer history to segments, retention candidate lists, recommendations and explainable output—not just a model endpoint.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> The current CLV fit is weak and its mean prediction is materially below the evaluation mean. Treat the segmentation and recommendations as an analytical prototype; do not claim validated revenue lift or deploy the CLV scores as reliable financial forecasts.</p>
+ <div class="project-bottom"><span class="project-stack">Python · PostgreSQL · XGBoost · SHAP · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/ecommerce-intelligence" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://ecommerce-intell.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://ecommerce-intelligence-xod0.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
 </article>
+
 <article class="project-card" data-category="data">
  <div class="project-top"><span class="project-number">16</span><span class="project-category">Causal ML / uplift policy</span></div>
  <h3>Causal Uplift Marketing Optimisation</h3>
- <p class="project-description">A customer-level targeting study on the 64,000-customer Hillstrom email experiment. Compares Men’s Email, Women’s Email and No Email using ATE analysis, LightGBM T-learners, class transformation, uplift curves and policy evaluation.</p>
- <div class="project-evidence"><span>64K customers · best AUUC 0.002054 · best Qini 0.004129</span></div>
- <p class="project-impact">At a 50% targeting depth, the held-out policy analysis estimated 41.9 incremental conversions and $6,051 incremental revenue. These are sample-based estimates, not guaranteed future campaign results.</p>
- <div class="project-bottom"><span class="project-stack">PYTHON · LIGHTGBM · CAUSAL INFERENCE · QINI · AUUC</span>
- <div class="project-links"><a href="https://github.com/Harshithpatali/causal-uplift-marketing-optimization" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
+ <p class="project-description">A three-arm email-marketing policy study on the Hillstrom experiment. Rather than predicting who is likely to buy, it estimates which treatment may change behaviour and ranks customers for targeted outreach.</p>
+ <div class="project-evidence"><span>The reported best model achieved AUUC 0.002054 and Qini 0.004129. Best uplift@10/20/30 was 0.63% / 0.41% / 0.55%. On the held-out targeting file, the 50% depth estimated ~41.9 incremental conversions; the 10% depth estimated ~18.0.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>64,000 customers with Men’s Email, Women’s Email and No Email arms; 48,000 train and 16,000 test rows; eight pre-treatment features. Methods include ATE comparisons, LightGBM T-learners, class transformation, uplift-at-k and held-out policy evaluation.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Shows how experimentation can move from average treatment effects to a capacity-constrained targeting policy. The policy comparison also tests personalised targeting against fixed-arm and random policies.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> Individual treatment effects are not directly observed; these are estimated conditional effects and held-out policy estimates from a historical experiment. They are not guaranteed future conversions or revenue.</p>
+ <div class="project-bottom"><span class="project-stack">Python · LightGBM · Causal Inference · Qini · AUUC</span><div class="project-links"><a href="https://github.com/Harshithpatali/causal-uplift-marketing-optimization" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div>
 </article>
+
 <article class="project-card" data-category="ai">
  <div class="project-top"><span class="project-number">17</span><span class="project-category">Multi-model orchestration</span></div>
- <h3>Multi-LLM Evaluation &amp; Synthesis</h3>
- <p class="project-description">An educational synthesis platform that runs parallel inference across multiple LLM providers, judges outputs against a seven-dimension rubric, retrieves persistent context with ChromaDB and combines useful elements into one response.</p>
- <div class="project-evidence"><span>Parallel LLM calls · 7 judge dimensions · cost &amp; latency analytics</span></div>
- <p class="project-impact">Explores comparative model evaluation, quality-versus-cost trade-offs, retrieval-backed tutoring and response synthesis rather than building another single-provider chatbot.</p>
- <div class="project-bottom"><span class="project-stack">PYTHON · ASYNC · CHROMADB · MULTI-LLM · STREAMLIT</span>
- <div class="project-links"><a href="https://github.com/Harshithpatali/multi-llm-ai-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://multi-llm-ai-platform-cf4zxquxedber9fn3hnnxz.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
+ <h3>Multi-LLM Evaluation & Synthesis</h3>
+ <p class="project-description">An educational synthesis platform that calls several LLMs in parallel, compares their responses with a judge rubric, retrieves persistent context from ChromaDB and synthesises a combined explanation for the learner.</p>
+ <div class="project-evidence"><span>The platform records per-provider latency, input/output tokens, estimated cost and judge scores. No controlled benchmark table or independent accuracy result is published, so no model-quality improvement is claimed.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>The README documents parallel calls across DeepSeek, Llama 3.3, OpenRouter and Groq, a seven-dimension response judge, RAG memory and a Streamlit analytics dashboard for latency, token use, estimated cost and model rankings.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Makes quality/cost/latency trade-offs visible and demonstrates an orchestration pattern that is more involved than a single-model chat endpoint.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> Judge scores are proxy measures and can inherit model bias. A labelled evaluation suite with human agreement, provider-matched budgets and repeated-run uncertainty would be needed for comparative quality claims.</p>
+ <div class="project-bottom"><span class="project-stack">Python · Async orchestration · ChromaDB · Multi-LLM · FastAPI · Streamlit</span><div class="project-links"><a href="https://github.com/Harshithpatali/multi-llm-ai-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://multi-llm-ai-platform-cf4zxquxedber9fn3hnnxz.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div></div>
 </article>
+
 <article class="project-card" data-category="data">
  <div class="project-top"><span class="project-number">18</span><span class="project-category">Automated analytics / AutoML</span></div>
- <h3>AI-Powered Analytics &amp; AutoML Platform</h3>
- <p class="project-description">A full-stack analytics workflow for CSV/Excel ingestion, schema checks, automated cleaning, exploratory analysis, feature engineering, model training and SHAP-based interpretation.</p>
- <div class="project-evidence"><span>Data ingestion → EDA → AutoML → explainability</span></div>
- <p class="project-impact">Packages common early-stage data science tasks into a repeatable application, with a FastAPI backend, Streamlit frontend and PostgreSQL persistence.</p>
- <div class="project-bottom"><span class="project-stack">PYTHON · FASTAPI · STREAMLIT · POSTGRESQL · XGBOOST · SHAP</span>
- <div class="project-links"><a href="https://github.com/Harshithpatali/ai-analytics-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://ai-analytics-platform-kreefks4zqxbykugnzbob6.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://ai-analytics-platform-rgi6.onrender.com/docs" target="_blank" rel="noopener noreferrer">API ↗</a></div></div>
-</article></div>
+ <h3>AI-Powered Analytics & AutoML Platform</h3>
+ <p class="project-description">A full-stack workflow for tabular data that takes users from CSV/XLSX ingestion and validation through cleaning, exploratory analysis, feature engineering, model training and SHAP-based explanation.</p>
+ <div class="project-evidence"><span>The README documents supported model families and workflow capabilities but does not publish a common held-out dataset benchmark, model comparison results or a test-suite count.</span></div>
+ <div class="project-facts">
+  <div><span class="project-fact-label">SCOPE</span><p>Regression candidates include Linear Regression and Gradient Boosting. Classification candidates include Logistic Regression, Random Forest, XGBoost, LightGBM and SVM. The product combines Streamlit, FastAPI and PostgreSQL/Neon persistence.</p></div>
+  <div><span class="project-fact-label">EVALUATION</span><p>Packages common first-pass data science work into a guided application, demonstrating separation between the interactive frontend, API, persisted data and model/interpretation services.</p></div>
+ </div>
+ <p class="project-limit"><b>Limitations:</b> Without a fixed benchmark dataset and a consistent evaluation protocol, the platform’s AutoML functionality should be presented as workflow automation, not evidence that it finds better models than a manual baseline.</p>
+ <div class="project-bottom"><span class="project-stack">Python · FastAPI · Streamlit · PostgreSQL · XGBoost · SHAP</span><div class="project-links"><a href="https://github.com/Harshithpatali/ai-analytics-platform" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://ai-analytics-platform-kreefks4zqxbykugnzbob6.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://ai-analytics-platform-rgi6.onrender.com/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a></div></div>
+</article>
+</div>
  </div>
 </section>
 
